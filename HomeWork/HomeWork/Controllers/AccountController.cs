@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace HomeWork.Controllers
 {
@@ -19,7 +20,55 @@ namespace HomeWork.Controllers
         [HttpPost]
         public ActionResult Login(LoginUser lu)
         {
-            return View();
+
+            if (ModelState.IsValid)
+            {
+                //学生登录
+                if (lu.Type == 1)
+                {
+                    var user = BLL.Student.existUser(lu);
+                    if (user == null)
+                    {
+                        error(user);
+                        return View(lu);
+                    }
+                    FormsAuthentication.SetAuthCookie(user.StudentNo.ToString(), false);
+                    return RedirectToAction("Index", "Home");
+                }
+
+                //教员登录
+                if (lu.Type == 2)
+                {
+                    var user = BLL.Teacher.existUser(lu);
+                    if (user == null)
+                    {
+                        error(user);
+                        return View(lu);
+                    }
+                    FormsAuthentication.SetAuthCookie(user.TeacherNo.ToString(), false);
+                    return RedirectToAction("Index", "Home");
+                }
+                //管理员登录
+                if (lu.Type == 3)
+                {
+                    var user = BLL.Admin.existUser(lu);
+                    if (user == null)
+                    {
+                        error(user);
+                        return View(lu);
+                    }
+                    FormsAuthentication.SetAuthCookie(user.AdminId.ToString(), false);
+                    return RedirectToAction("Index", "Home");
+                }
+
+
+            }
+            return View(lu);
+        }
+
+        private void error(dynamic user)
+        {
+            ModelState.AddModelError("", "用户名或密码不正确！！");
         }
 
 

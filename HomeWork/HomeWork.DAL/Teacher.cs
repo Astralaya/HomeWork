@@ -14,6 +14,16 @@ namespace HomeWork.DAL
     {
         QingNiaoEntities context = new QingNiaoEntities();
         /// <summary>
+        /// 教员登录
+        /// </summary>
+        /// <param name="lu"></param>
+        /// <returns></returns>
+        public Model.Teacher existUser(LoginUser lu)
+        {
+            return context.Teachers.SingleOrDefault(t => lu.UserName == t.TeacherName && lu.Password == t.PassWord);
+        }
+
+        /// <summary>
         /// 按 年级>班级 查询作业
         /// </summary>
         /// <returns></returns>

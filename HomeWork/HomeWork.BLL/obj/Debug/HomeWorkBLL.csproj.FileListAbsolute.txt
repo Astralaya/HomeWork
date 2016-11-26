@@ -10,3 +10,15 @@ d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.BLL\bin\Debug\EntityFram
 d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
 d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.dll
 d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.pdb
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.BLL.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.BLL.pdb
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.DAL.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.Model.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\EntityFramework.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.DAL.pdb
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.Model.pdb
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\EntityFramework.xml
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWorkBLL.csprojResolveAssemblyReference.cache
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.dll
+D:\桌面\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.pdb

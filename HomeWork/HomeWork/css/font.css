@@ -5,3 +5,7 @@
 #jiaCu {
     font-weight:600;
 }
+.err {
+    color:red;
+    text-align:left;
+}

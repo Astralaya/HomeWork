@@ -18,9 +18,9 @@ namespace HomeWork.DAL
         /// </summary>
         /// <param name="al"></param>
         /// <returns></returns>
-        public bool adminLogin(LoginUser al)
+        public Administrator existUser(LoginUser al)
         {
-            return context.Administrators.SingleOrDefault(a => a.AdminName == al.UserName && a.Password == al.Password) != null;
+            return context.Administrators.SingleOrDefault(a => a.AdminName == al.UserName && a.Password == al.Password);
         }
         /// <summary>
         /// 查询文件上传设置
