@@ -33,7 +33,8 @@ namespace HomeWork.Controllers
                         return View(lu);
                     }
                     FormsAuthentication.SetAuthCookie(user.StudentNo.ToString(), false);
-                    return RedirectToAction("Index", "Home");
+
+                    return RedirectToAction("Index", "Student");
                 }
 
                 //教员登录
@@ -46,7 +47,7 @@ namespace HomeWork.Controllers
                         return View(lu);
                     }
                     FormsAuthentication.SetAuthCookie(user.TeacherNo.ToString(), false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Teacher");
                 }
                 //管理员登录
                 if (lu.Type == 3)
@@ -58,7 +59,7 @@ namespace HomeWork.Controllers
                         return View(lu);
                     }
                     FormsAuthentication.SetAuthCookie(user.AdminId.ToString(), false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Admin/Home");
                 }
 
 
