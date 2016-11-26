@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8f3f60e5af4942ff99f13b8114bff4ce" Name="关系图1">
+        <EntityTypeShape EntityType="QingNiaoModel.Administrator" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Chapter" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Class" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Grade" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Homework" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.HomeworkType" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Score" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Student" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Subject" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.Teacher" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.UploadFile" Width="1.5" PointX="5.25" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QingNiaoModel.YXZJ" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="QingNiaoModel.FK_Chapter_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_Chapter" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK__Class__GradeId__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK__Class__TeacherId__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK__Student__ClassId__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_HomeworkType" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_Score" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_UploadFile" ManuallyRouted="false" />
+        <AssociationConnector Association="QingNiaoModel.FK_Homework_YXZJ" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

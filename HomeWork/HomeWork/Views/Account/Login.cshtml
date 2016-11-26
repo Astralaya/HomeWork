@@ -1,0 +1,114 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html class="rgba borderradius">
+<head>
+    <title>登录 - 作业登记系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="~/css/core[1].css" rel="stylesheet" />
+    <link href="~/css/style[1].css" rel="stylesheet" />
+
+    <link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/bootstrap-3.3.0/js/tests/vendor/jquery.min.js"></script>
+    <script src="~/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <link href="~/css/font.css" rel="stylesheet" />
+    <script src="~/js/index.js"></script>
+</head>
+<body>
+    <div id="stage">
+        <div id="guide" class="simple float">
+            <h1 style="font-weight: bolder">学员作业登记系统</h1>
+        </div>
+        <div id="mainer" style="min-height: 298px;">
+            <div id="area-login">
+                @*轮播图片*@
+                <div class="block l">
+                    <div id="myCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <img src="~/image/01.jpg" class="img-rounded" />
+                            </div>
+                            <div class="item">
+                                <img src="~/image/02.jpg" class="img-rounded" />
+                            </div>
+                            <div class="item">
+                                <img src="~/image/03.jpg" class="img-rounded" />
+                            </div>
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+                    </div>
+
+                    @*<div class="bg-login"></div>*@
+                </div>
+                <div class="block r">
+                    <div class="area-login">
+                        <div id="form-login" data-focus="auto" data-save="form-login" class="form">
+                            <div style="padding: 3px 2px; border-bottom: 1px solid #ccc">
+                                <h2 id="jiaCu">登&nbsp;&nbsp;录</h2>
+                            </div>
+                            <form id="ff" method="post" action="@Url.Action("Login","Account")">
+                                <div>
+                                    <div class="area">
+                                        <i class="inp-icon icon icon-user"></i>
+                                        <input  name="UserName" type="text" placeholder="请输入账号"><span class="clearfix"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="area">
+                                        <i class="inp-icon icon icon-lock"></i>
+                                        <input name="PassWord" type="password" placeholder="请输入密码"><span class="clearfix"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="area">
+                                        <i class="inp-icon icon icon-lock"></i>
+                                        <input name="identityCode" type="text" placeholder="验证码"><span class="clearfix"></span>
+                                    </div>
+                                    <div style="height:60px">
+                                        <img  onclick="this.src=this.src+'?'" src="@Url.Action("SecurityCode")" width="119" height="33" style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;<label>点击图片更换验证码</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="area">
+                                        <i class="inp-icon icon icon-lock"></i>
+                                        登录身份:
+                                        <select name="Type">
+                                            <option value="1">学生</option>
+                                            <option value="2">教员</option>
+                                            <option value="3">管理员</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <div>
+                                        <input type="submit" value="登  录" style="height: 40px; background-color: #778CDD" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="other-login">
+                            <a href="/login/forgot/" target="_blank" class="inro r">忘记密码?</a><span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <span class="clearfix"></span>
+            </div>
+        </div>
+    </div>
+    <span class="clearfix" style="text-align: center">&copy;青鸟出品</span><br />
+    <a class="clearfix" style="text-align: center">使用前必读</a>
+</body>
+</html>

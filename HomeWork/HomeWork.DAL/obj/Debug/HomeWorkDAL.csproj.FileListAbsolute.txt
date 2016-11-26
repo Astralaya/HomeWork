@@ -1,0 +1,11 @@
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\obj\Debug\HomeWorkDAL.csprojResolveAssemblyReference.cache
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.dll.config
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.dll
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.pdb
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\EntityFramework.dll
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.Model.dll
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.Model.pdb
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\EntityFramework.xml
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.dll
+d:\文档\visual studio 2012\Projects\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.pdb

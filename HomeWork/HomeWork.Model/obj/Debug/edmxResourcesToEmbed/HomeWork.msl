@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QingNiaoModelStoreContainer" CdmEntityContainer="QingNiaoEntities">
+    <EntitySetMapping Name="Administrators">
+      <EntityTypeMapping TypeName="QingNiaoModel.Administrator">
+        <MappingFragment StoreEntitySet="Administrator">
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chapters">
+      <EntityTypeMapping TypeName="QingNiaoModel.Chapter">
+        <MappingFragment StoreEntitySet="Chapter">
+          <ScalarProperty Name="ChapterId" ColumnName="ChapterId" />
+          <ScalarProperty Name="ChapterName" ColumnName="ChapterName" />
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="QingNiaoModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="TeacherId2" ColumnName="TeacherId2" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="QingNiaoModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homework">
+      <EntityTypeMapping TypeName="QingNiaoModel.Homework">
+        <MappingFragment StoreEntitySet="Homework">
+          <ScalarProperty Name="HomeworkId" ColumnName="HomeworkId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="ChapterId" ColumnName="ChapterId" />
+          <ScalarProperty Name="HomeworkTypeId" ColumnName="HomeworkTypeId" />
+          <ScalarProperty Name="ScoreId" ColumnName="ScoreId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="YXZJId" ColumnName="YXZJId" />
+          <ScalarProperty Name="UploadFileId" ColumnName="UploadFileId" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeworkTypes">
+      <EntityTypeMapping TypeName="QingNiaoModel.HomeworkType">
+        <MappingFragment StoreEntitySet="HomeworkType">
+          <ScalarProperty Name="HomeworkTypeId" ColumnName="HomeworkTypeId" />
+          <ScalarProperty Name="HomeworkName" ColumnName="HomeworkName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Scores">
+      <EntityTypeMapping TypeName="QingNiaoModel.Score">
+        <MappingFragment StoreEntitySet="Score">
+          <ScalarProperty Name="ScoreId" ColumnName="ScoreId" />
+          <ScalarProperty Name="ScoreName" ColumnName="ScoreName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="QingNiaoModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="StudentNamePinyin" ColumnName="StudentNamePinyin" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="IdCardNo" ColumnName="IdCardNo" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="EduId" ColumnName="EduId" />
+          <ScalarProperty Name="GraduateSchool" ColumnName="GraduateSchool" />
+          <ScalarProperty Name="Major" ColumnName="Major" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
+          <ScalarProperty Name="FamilyPhone" ColumnName="FamilyPhone" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="QingNiaoModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="QingNiaoModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="TeacherNo" ColumnName="TeacherNo" />
+          <ScalarProperty Name="TeacherName" ColumnName="TeacherName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Stauts" ColumnName="Stauts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadFiles">
+      <EntityTypeMapping TypeName="QingNiaoModel.UploadFile">
+        <MappingFragment StoreEntitySet="UploadFile">
+          <ScalarProperty Name="UploadFileId" ColumnName="UploadFileId" />
+          <ScalarProperty Name="UploadFileType" ColumnName="UploadFileType" />
+          <ScalarProperty Name="UploadFileName" ColumnName="UploadFileName" />
+          <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
+          <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YXZJs">
+      <EntityTypeMapping TypeName="QingNiaoModel.YXZJ">
+        <MappingFragment StoreEntitySet="YXZJ">
+          <ScalarProperty Name="YXZJId" ColumnName="YXZJId" />
+          <ScalarProperty Name="Y_Have" ColumnName="Y_Have" />
+          <ScalarProperty Name="Y_NotHave" ColumnName="Y_NotHave" />
+          <ScalarProperty Name="Z_Have" ColumnName="Z_Have" />
+          <ScalarProperty Name="Z_NotHave" ColumnName="Z_NotHave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
