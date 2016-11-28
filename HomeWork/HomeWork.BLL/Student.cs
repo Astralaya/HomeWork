@@ -14,5 +14,13 @@ namespace HomeWork.BLL
         {
             return student.existUser(lu);
         }
+        public List<Chapter> selectChapter() 
+        {
+            return student.selectChapter();
+        }
+        public List<QueryHomeWork> selectYuxi(int studentNo, int chapterId)
+        {
+            return student.selectYuxi(studentNo, chapterId);
+        }
     }
 }

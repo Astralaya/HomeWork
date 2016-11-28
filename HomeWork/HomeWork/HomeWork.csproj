@@ -130,6 +130,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\SelectListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tool\IdentityCode.cs" />
   </ItemGroup>
@@ -579,11 +580,14 @@
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutTeacher.cshtml" />
     <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Student\List.cshtml" />
+    <Content Include="Views\Student\Lianxi.cshtml" />
+    <Content Include="Views\Student\Yuntiku.cshtml" />
+    <Content Include="Views\Student\Yuxi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
