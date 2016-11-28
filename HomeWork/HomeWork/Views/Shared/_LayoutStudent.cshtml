@@ -6,6 +6,10 @@
     <link href="~/css/core[1].css" rel="stylesheet" />
     <link href="~/css/style[1].css" rel="stylesheet" />
     <link href="~/css/font.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <title>@ViewBag.Title</title>
 </head>
 <body id="cc">
@@ -17,14 +21,21 @@
     <hr />
     <br />
     <div class="carousel slide" style="height:40px"><span style="float:left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <div style="float:left;width:200px;"><a href="#" class="btn  btn-block">查询作业情况</a></div>
-        <div style="float:left;width:200px;"><a href="#" class="btn btn-lg btn-primary">上机练习</a></div>
-        <div style="float:left;width:200px;"><a href="#" class="btn btn-lg btn-primary">云题库</a></div>
-        <div style="float:left;width:auto;"><a href="#" class="btn btn-lg btn-primary">预习总结</a></div>
+        <div style="float:left;width:200px;">@Ajax.ActionLink("查询作业情况", "List", "Student", new AjaxOptions() { OnSuccess="a"})</div>
+        <div style="float:left;width:200px;">@Ajax.ActionLink("上机练习", "Lianxi", "Student", new AjaxOptions() { OnSuccess="a"})</div>
+        <div style="float:left;width:200px;">@Ajax.ActionLink("云题库", "Yuntiku", "Student", new AjaxOptions() { OnSuccess="a"})</div>
+        <div style="float:left;width:auto;">@Ajax.ActionLink("预习总结", "Yuxi", "Student", new AjaxOptions() { OnSuccess="a"})</div>
+        
+
     </div>
     <br />
     <hr />
     @RenderBody()
-
+    <script>
+        $.ajaxSetup({cache:false});
+        function a(data) {
+            $(".a").html(data);
+        }
+    </script>
 </body>
 </html>
