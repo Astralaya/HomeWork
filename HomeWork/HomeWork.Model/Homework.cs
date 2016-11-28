@@ -15,14 +15,14 @@ namespace HomeWork.Model
     public partial class Homework
     {
         public int HomeworkId { get; set; }
-        public int StudentId { get; set; }
+        public int StudentNo { get; set; }
         public int ChapterId { get; set; }
         public int HomeworkTypeId { get; set; }
         public Nullable<int> ScoreId { get; set; }
         public string Comment { get; set; }
         public Nullable<int> YXZJId { get; set; }
+        public Nullable<int> Speed { get; set; }
         public int UploadFileId { get; set; }
-        public int Speed { get; set; }
     
         public virtual Chapter Chapter { get; set; }
         public virtual HomeworkType HomeworkType { get; set; }

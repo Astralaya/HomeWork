@@ -4,66 +4,70 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QingNiaoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="QingNiaoModelStoreContainer">
-          <EntitySet Name="Administrator" EntityType="QingNiaoModel.Store.Administrator" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Chapter" EntityType="QingNiaoModel.Store.Chapter" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Class" EntityType="QingNiaoModel.Store.Class" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Grade" EntityType="QingNiaoModel.Store.Grade" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Homework" EntityType="QingNiaoModel.Store.Homework" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="HomeworkType" EntityType="QingNiaoModel.Store.HomeworkType" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Score" EntityType="QingNiaoModel.Store.Score" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Student" EntityType="QingNiaoModel.Store.Student" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Subject" EntityType="QingNiaoModel.Store.Subject" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Teacher" EntityType="QingNiaoModel.Store.Teacher" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UploadFile" EntityType="QingNiaoModel.Store.UploadFile" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="YXZJ" EntityType="QingNiaoModel.Store.YXZJ" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK__Class__GradeId__1DE57479" Association="QingNiaoModel.Store.FK__Class__GradeId__1DE57479">
+      <Schema Namespace="HomeWorkModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="HomeWorkModelStoreContainer">
+          <EntitySet Name="Administrator" EntityType="HomeWorkModel.Store.Administrator" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Chapter" EntityType="HomeWorkModel.Store.Chapter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Class" EntityType="HomeWorkModel.Store.Class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Grade" EntityType="HomeWorkModel.Store.Grade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Homework" EntityType="HomeWorkModel.Store.Homework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HomeworkType" EntityType="HomeWorkModel.Store.HomeworkType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Score" EntityType="HomeWorkModel.Store.Score" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Student" EntityType="HomeWorkModel.Store.Student" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subject" EntityType="HomeWorkModel.Store.Subject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Teacher" EntityType="HomeWorkModel.Store.Teacher" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UploadFile" EntityType="HomeWorkModel.Store.UploadFile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="YXZJ" EntityType="HomeWorkModel.Store.YXZJ" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Class__GradeId__1DE57479" Association="HomeWorkModel.Store.FK__Class__GradeId__1DE57479">
             <End Role="Grade" EntitySet="Grade" />
             <End Role="Class" EntitySet="Class" />
           </AssociationSet>
-          <AssociationSet Name="FK__Class__TeacherId__145C0A3F" Association="QingNiaoModel.Store.FK__Class__TeacherId__145C0A3F">
+          <AssociationSet Name="FK__Class__TeacherId__145C0A3F" Association="HomeWorkModel.Store.FK__Class__TeacherId__145C0A3F">
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Class" EntitySet="Class" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__ClassId__164452B1" Association="QingNiaoModel.Store.FK__Student__ClassId__164452B1">
+          <AssociationSet Name="FK__Student__ClassId__164452B1" Association="HomeWorkModel.Store.FK__Student__ClassId__164452B1">
             <End Role="Class" EntitySet="Class" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-          <AssociationSet Name="FK_Chapter_Subject" Association="QingNiaoModel.Store.FK_Chapter_Subject">
+          <AssociationSet Name="FK_Chapter_Subject" Association="HomeWorkModel.Store.FK_Chapter_Subject">
             <End Role="Subject" EntitySet="Subject" />
             <End Role="Chapter" EntitySet="Chapter" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Chapter" Association="QingNiaoModel.Store.FK_Homework_Chapter">
+          <AssociationSet Name="FK_Homework_Chapter" Association="HomeWorkModel.Store.FK_Homework_Chapter">
             <End Role="Chapter" EntitySet="Chapter" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_HomeworkType" Association="QingNiaoModel.Store.FK_Homework_HomeworkType">
+          <AssociationSet Name="FK_Homework_HomeworkType" Association="HomeWorkModel.Store.FK_Homework_HomeworkType">
             <End Role="HomeworkType" EntitySet="HomeworkType" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Score" Association="QingNiaoModel.Store.FK_Homework_Score">
+          <AssociationSet Name="FK_Homework_Score" Association="HomeWorkModel.Store.FK_Homework_Score">
             <End Role="Score" EntitySet="Score" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Student" Association="QingNiaoModel.Store.FK_Homework_Student">
+          <AssociationSet Name="FK_Homework_Student" Association="HomeWorkModel.Store.FK_Homework_Student">
             <End Role="Student" EntitySet="Student" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_UploadFile" Association="QingNiaoModel.Store.FK_Homework_UploadFile">
+          <AssociationSet Name="FK_Homework_UploadFile" Association="HomeWorkModel.Store.FK_Homework_UploadFile">
             <End Role="UploadFile" EntitySet="UploadFile" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_YXZJ" Association="QingNiaoModel.Store.FK_Homework_YXZJ">
+          <AssociationSet Name="FK_Homework_YXZJ" Association="HomeWorkModel.Store.FK_Homework_YXZJ">
             <End Role="YXZJ" EntitySet="YXZJ" />
             <End Role="Homework" EntitySet="Homework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.Store.FK_UploadFile_Student">
+            <End Role="Student" EntitySet="Student" />
+            <End Role="UploadFile" EntitySet="UploadFile" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Administrator">
           <Key>
             <PropertyRef Name="AdminId" />
           </Key>
-          <Property Name="AdminId" Type="int" Nullable="false" />
+          <Property Name="AdminId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="AdminName" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
@@ -71,7 +75,7 @@
           <Key>
             <PropertyRef Name="ChapterId" />
           </Key>
-          <Property Name="ChapterId" Type="int" Nullable="false" />
+          <Property Name="ChapterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ChapterName" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="SubjectId" Type="int" Nullable="false" />
         </EntityType>
@@ -98,20 +102,20 @@
             <PropertyRef Name="HomeworkId" />
           </Key>
           <Property Name="HomeworkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="StudentNo" Type="int" Nullable="false" />
           <Property Name="ChapterId" Type="int" Nullable="false" />
           <Property Name="HomeworkTypeId" Type="int" Nullable="false" />
           <Property Name="ScoreId" Type="int" />
           <Property Name="Comment" Type="nvarchar" MaxLength="50" />
           <Property Name="YXZJId" Type="int" />
+          <Property Name="Speed" Type="int" />
           <Property Name="UploadFileId" Type="int" Nullable="false" />
-          <Property Name="Speed" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="HomeworkType">
           <Key>
             <PropertyRef Name="HomeworkTypeId" />
           </Key>
-          <Property Name="HomeworkTypeId" Type="int" Nullable="false" />
+          <Property Name="HomeworkTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="HomeworkName" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="Score">
@@ -148,7 +152,7 @@
           <Key>
             <PropertyRef Name="SubjectId" />
           </Key>
-          <Property Name="SubjectId" Type="int" Nullable="false" />
+          <Property Name="SubjectId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="SubjectName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Teacher">
@@ -165,12 +169,12 @@
           <Key>
             <PropertyRef Name="UploadFileId" />
           </Key>
-          <Property Name="UploadFileId" Type="int" Nullable="false" />
-          <Property Name="UploadFileType" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="UploadFileId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="UploadFileName" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="UploadFilePath" Type="nvarchar" Nullable="false" MaxLength="200" />
           <Property Name="UploadTime" Type="datetime" Nullable="false" />
           <Property Name="Describe" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="StudentNo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="YXZJ">
           <Key>
@@ -183,8 +187,8 @@
           <Property Name="Z_NotHave" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <Association Name="FK__Class__GradeId__1DE57479">
-          <End Role="Grade" Type="QingNiaoModel.Store.Grade" Multiplicity="1" />
-          <End Role="Class" Type="QingNiaoModel.Store.Class" Multiplicity="*" />
+          <End Role="Grade" Type="HomeWorkModel.Store.Grade" Multiplicity="1" />
+          <End Role="Class" Type="HomeWorkModel.Store.Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grade">
               <PropertyRef Name="Id" />
@@ -195,8 +199,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Class__TeacherId__145C0A3F">
-          <End Role="Teacher" Type="QingNiaoModel.Store.Teacher" Multiplicity="1" />
-          <End Role="Class" Type="QingNiaoModel.Store.Class" Multiplicity="*" />
+          <End Role="Teacher" Type="HomeWorkModel.Store.Teacher" Multiplicity="1" />
+          <End Role="Class" Type="HomeWorkModel.Store.Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Teacher">
               <PropertyRef Name="TeacherId" />
@@ -207,8 +211,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Student__ClassId__164452B1">
-          <End Role="Class" Type="QingNiaoModel.Store.Class" Multiplicity="0..1" />
-          <End Role="Student" Type="QingNiaoModel.Store.Student" Multiplicity="*" />
+          <End Role="Class" Type="HomeWorkModel.Store.Class" Multiplicity="0..1" />
+          <End Role="Student" Type="HomeWorkModel.Store.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Class">
               <PropertyRef Name="ClassId" />
@@ -219,8 +223,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Chapter_Subject">
-          <End Role="Subject" Type="QingNiaoModel.Store.Subject" Multiplicity="1" />
-          <End Role="Chapter" Type="QingNiaoModel.Store.Chapter" Multiplicity="*" />
+          <End Role="Subject" Type="HomeWorkModel.Store.Subject" Multiplicity="1" />
+          <End Role="Chapter" Type="HomeWorkModel.Store.Chapter" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Subject">
               <PropertyRef Name="SubjectId" />
@@ -231,8 +235,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Chapter">
-          <End Role="Chapter" Type="QingNiaoModel.Store.Chapter" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="Chapter" Type="HomeWorkModel.Store.Chapter" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Chapter">
               <PropertyRef Name="ChapterId" />
@@ -243,8 +247,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_HomeworkType">
-          <End Role="HomeworkType" Type="QingNiaoModel.Store.HomeworkType" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="HomeworkType" Type="HomeWorkModel.Store.HomeworkType" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HomeworkType">
               <PropertyRef Name="HomeworkTypeId" />
@@ -255,8 +259,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Score">
-          <End Role="Score" Type="QingNiaoModel.Store.Score" Multiplicity="0..1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="Score" Type="HomeWorkModel.Store.Score" Multiplicity="0..1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Score">
               <PropertyRef Name="ScoreId" />
@@ -267,20 +271,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Student">
-          <End Role="Student" Type="QingNiaoModel.Store.Student" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="Student" Type="HomeWorkModel.Store.Student" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
               <PropertyRef Name="StudentNo" />
             </Principal>
             <Dependent Role="Homework">
-              <PropertyRef Name="StudentId" />
+              <PropertyRef Name="StudentNo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_UploadFile">
-          <End Role="UploadFile" Type="QingNiaoModel.Store.UploadFile" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="UploadFile" Type="HomeWorkModel.Store.UploadFile" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UploadFile">
               <PropertyRef Name="UploadFileId" />
@@ -291,8 +295,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_YXZJ">
-          <End Role="YXZJ" Type="QingNiaoModel.Store.YXZJ" Multiplicity="0..1" />
-          <End Role="Homework" Type="QingNiaoModel.Store.Homework" Multiplicity="*" />
+          <End Role="YXZJ" Type="HomeWorkModel.Store.YXZJ" Multiplicity="0..1" />
+          <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="YXZJ">
               <PropertyRef Name="YXZJId" />
@@ -302,70 +306,86 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UploadFile_Student">
+          <End Role="Student" Type="HomeWorkModel.Store.Student" Multiplicity="1" />
+          <End Role="UploadFile" Type="HomeWorkModel.Store.UploadFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="UploadFile">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QingNiaoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="QingNiaoEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="Administrators" EntityType="QingNiaoModel.Administrator" />
-          <EntitySet Name="Chapters" EntityType="QingNiaoModel.Chapter" />
-          <EntitySet Name="Classes" EntityType="QingNiaoModel.Class" />
-          <EntitySet Name="Grades" EntityType="QingNiaoModel.Grade" />
-          <EntitySet Name="Homework" EntityType="QingNiaoModel.Homework" />
-          <EntitySet Name="HomeworkTypes" EntityType="QingNiaoModel.HomeworkType" />
-          <EntitySet Name="Scores" EntityType="QingNiaoModel.Score" />
-          <EntitySet Name="Students" EntityType="QingNiaoModel.Student" />
-          <EntitySet Name="Subjects" EntityType="QingNiaoModel.Subject" />
-          <EntitySet Name="Teachers" EntityType="QingNiaoModel.Teacher" />
-          <EntitySet Name="UploadFiles" EntityType="QingNiaoModel.UploadFile" />
-          <EntitySet Name="YXZJs" EntityType="QingNiaoModel.YXZJ" />
-          <AssociationSet Name="FK_Chapter_Subject" Association="QingNiaoModel.FK_Chapter_Subject">
+      <Schema Namespace="HomeWorkModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HomeWorkEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Administrators" EntityType="HomeWorkModel.Administrator" />
+          <EntitySet Name="Chapters" EntityType="HomeWorkModel.Chapter" />
+          <EntitySet Name="Classes" EntityType="HomeWorkModel.Class" />
+          <EntitySet Name="Grades" EntityType="HomeWorkModel.Grade" />
+          <EntitySet Name="Homework" EntityType="HomeWorkModel.Homework" />
+          <EntitySet Name="HomeworkTypes" EntityType="HomeWorkModel.HomeworkType" />
+          <EntitySet Name="Scores" EntityType="HomeWorkModel.Score" />
+          <EntitySet Name="Students" EntityType="HomeWorkModel.Student" />
+          <EntitySet Name="Subjects" EntityType="HomeWorkModel.Subject" />
+          <EntitySet Name="Teachers" EntityType="HomeWorkModel.Teacher" />
+          <EntitySet Name="UploadFiles" EntityType="HomeWorkModel.UploadFile" />
+          <EntitySet Name="YXZJs" EntityType="HomeWorkModel.YXZJ" />
+          <AssociationSet Name="FK_Chapter_Subject" Association="HomeWorkModel.FK_Chapter_Subject">
             <End Role="Subject" EntitySet="Subjects" />
             <End Role="Chapter" EntitySet="Chapters" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Chapter" Association="QingNiaoModel.FK_Homework_Chapter">
+          <AssociationSet Name="FK_Homework_Chapter" Association="HomeWorkModel.FK_Homework_Chapter">
             <End Role="Chapter" EntitySet="Chapters" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK__Class__GradeId__1DE57479" Association="QingNiaoModel.FK__Class__GradeId__1DE57479">
+          <AssociationSet Name="FK__Class__GradeId__1DE57479" Association="HomeWorkModel.FK__Class__GradeId__1DE57479">
             <End Role="Grade" EntitySet="Grades" />
             <End Role="Class" EntitySet="Classes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Class__TeacherId__145C0A3F" Association="QingNiaoModel.FK__Class__TeacherId__145C0A3F">
+          <AssociationSet Name="FK__Class__TeacherId__145C0A3F" Association="HomeWorkModel.FK__Class__TeacherId__145C0A3F">
             <End Role="Teacher" EntitySet="Teachers" />
             <End Role="Class" EntitySet="Classes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__ClassId__164452B1" Association="QingNiaoModel.FK__Student__ClassId__164452B1">
+          <AssociationSet Name="FK__Student__ClassId__164452B1" Association="HomeWorkModel.FK__Student__ClassId__164452B1">
             <End Role="Class" EntitySet="Classes" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_HomeworkType" Association="QingNiaoModel.FK_Homework_HomeworkType">
+          <AssociationSet Name="FK_Homework_HomeworkType" Association="HomeWorkModel.FK_Homework_HomeworkType">
             <End Role="HomeworkType" EntitySet="HomeworkTypes" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Score" Association="QingNiaoModel.FK_Homework_Score">
+          <AssociationSet Name="FK_Homework_Score" Association="HomeWorkModel.FK_Homework_Score">
             <End Role="Score" EntitySet="Scores" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_Student" Association="QingNiaoModel.FK_Homework_Student">
+          <AssociationSet Name="FK_Homework_Student" Association="HomeWorkModel.FK_Homework_Student">
             <End Role="Student" EntitySet="Students" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_UploadFile" Association="QingNiaoModel.FK_Homework_UploadFile">
+          <AssociationSet Name="FK_Homework_UploadFile" Association="HomeWorkModel.FK_Homework_UploadFile">
             <End Role="UploadFile" EntitySet="UploadFiles" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_Homework_YXZJ" Association="QingNiaoModel.FK_Homework_YXZJ">
+          <AssociationSet Name="FK_Homework_YXZJ" Association="HomeWorkModel.FK_Homework_YXZJ">
             <End Role="YXZJ" EntitySet="YXZJs" />
             <End Role="Homework" EntitySet="Homework" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.FK_UploadFile_Student">
+            <End Role="Student" EntitySet="Students" />
+            <End Role="UploadFile" EntitySet="UploadFiles" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Administrator">
           <Key>
             <PropertyRef Name="AdminId" />
           </Key>
-          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="AdminName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
@@ -373,11 +393,11 @@
           <Key>
             <PropertyRef Name="ChapterId" />
           </Key>
-          <Property Name="ChapterId" Type="Int32" Nullable="false" />
+          <Property Name="ChapterId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="ChapterName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="SubjectId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Subject" Relationship="QingNiaoModel.FK_Chapter_Subject" FromRole="Chapter" ToRole="Subject" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_Chapter" FromRole="Chapter" ToRole="Homework" />
+          <NavigationProperty Name="Subject" Relationship="HomeWorkModel.FK_Chapter_Subject" FromRole="Chapter" ToRole="Subject" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_Chapter" FromRole="Chapter" ToRole="Homework" />
         </EntityType>
         <EntityType Name="Class">
           <Key>
@@ -389,9 +409,9 @@
           <Property Name="TeacherId2" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <Property Name="GradeId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Grade" Relationship="QingNiaoModel.FK__Class__GradeId__1DE57479" FromRole="Class" ToRole="Grade" />
-          <NavigationProperty Name="Teacher" Relationship="QingNiaoModel.FK__Class__TeacherId__145C0A3F" FromRole="Class" ToRole="Teacher" />
-          <NavigationProperty Name="Students" Relationship="QingNiaoModel.FK__Student__ClassId__164452B1" FromRole="Class" ToRole="Student" />
+          <NavigationProperty Name="Grade" Relationship="HomeWorkModel.FK__Class__GradeId__1DE57479" FromRole="Class" ToRole="Grade" />
+          <NavigationProperty Name="Teacher" Relationship="HomeWorkModel.FK__Class__TeacherId__145C0A3F" FromRole="Class" ToRole="Teacher" />
+          <NavigationProperty Name="Students" Relationship="HomeWorkModel.FK__Student__ClassId__164452B1" FromRole="Class" ToRole="Student" />
         </EntityType>
         <EntityType Name="Grade">
           <Key>
@@ -399,35 +419,35 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="GradeName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="Classes" Relationship="QingNiaoModel.FK__Class__GradeId__1DE57479" FromRole="Grade" ToRole="Class" />
+          <NavigationProperty Name="Classes" Relationship="HomeWorkModel.FK__Class__GradeId__1DE57479" FromRole="Grade" ToRole="Class" />
         </EntityType>
         <EntityType Name="Homework">
           <Key>
             <PropertyRef Name="HomeworkId" />
           </Key>
           <Property Name="HomeworkId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="StudentNo" Type="Int32" Nullable="false" />
           <Property Name="ChapterId" Type="Int32" Nullable="false" />
           <Property Name="HomeworkTypeId" Type="Int32" Nullable="false" />
           <Property Name="ScoreId" Type="Int32" />
           <Property Name="Comment" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="YXZJId" Type="Int32" />
+          <Property Name="Speed" Type="Int32" />
           <Property Name="UploadFileId" Type="Int32" Nullable="false" />
-          <Property Name="Speed" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Chapter" Relationship="QingNiaoModel.FK_Homework_Chapter" FromRole="Homework" ToRole="Chapter" />
-          <NavigationProperty Name="HomeworkType" Relationship="QingNiaoModel.FK_Homework_HomeworkType" FromRole="Homework" ToRole="HomeworkType" />
-          <NavigationProperty Name="Score" Relationship="QingNiaoModel.FK_Homework_Score" FromRole="Homework" ToRole="Score" />
-          <NavigationProperty Name="Student" Relationship="QingNiaoModel.FK_Homework_Student" FromRole="Homework" ToRole="Student" />
-          <NavigationProperty Name="UploadFile" Relationship="QingNiaoModel.FK_Homework_UploadFile" FromRole="Homework" ToRole="UploadFile" />
-          <NavigationProperty Name="YXZJ" Relationship="QingNiaoModel.FK_Homework_YXZJ" FromRole="Homework" ToRole="YXZJ" />
+          <NavigationProperty Name="Chapter" Relationship="HomeWorkModel.FK_Homework_Chapter" FromRole="Homework" ToRole="Chapter" />
+          <NavigationProperty Name="HomeworkType" Relationship="HomeWorkModel.FK_Homework_HomeworkType" FromRole="Homework" ToRole="HomeworkType" />
+          <NavigationProperty Name="Score" Relationship="HomeWorkModel.FK_Homework_Score" FromRole="Homework" ToRole="Score" />
+          <NavigationProperty Name="Student" Relationship="HomeWorkModel.FK_Homework_Student" FromRole="Homework" ToRole="Student" />
+          <NavigationProperty Name="UploadFile" Relationship="HomeWorkModel.FK_Homework_UploadFile" FromRole="Homework" ToRole="UploadFile" />
+          <NavigationProperty Name="YXZJ" Relationship="HomeWorkModel.FK_Homework_YXZJ" FromRole="Homework" ToRole="YXZJ" />
         </EntityType>
         <EntityType Name="HomeworkType">
           <Key>
             <PropertyRef Name="HomeworkTypeId" />
           </Key>
-          <Property Name="HomeworkTypeId" Type="Int32" Nullable="false" />
+          <Property Name="HomeworkTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="HomeworkName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_HomeworkType" FromRole="HomeworkType" ToRole="Homework" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_HomeworkType" FromRole="HomeworkType" ToRole="Homework" />
         </EntityType>
         <EntityType Name="Score">
           <Key>
@@ -435,7 +455,7 @@
           </Key>
           <Property Name="ScoreId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="ScoreName" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_Score" FromRole="Score" ToRole="Homework" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_Score" FromRole="Score" ToRole="Homework" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -459,16 +479,17 @@
           <Property Name="Remark" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <Property Name="Age" Type="Int32" />
-          <NavigationProperty Name="Class" Relationship="QingNiaoModel.FK__Student__ClassId__164452B1" FromRole="Student" ToRole="Class" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_Student" FromRole="Student" ToRole="Homework" />
+          <NavigationProperty Name="Class" Relationship="HomeWorkModel.FK__Student__ClassId__164452B1" FromRole="Student" ToRole="Class" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_Student" FromRole="Student" ToRole="Homework" />
+          <NavigationProperty Name="UploadFiles" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="Student" ToRole="UploadFile" />
         </EntityType>
         <EntityType Name="Subject">
           <Key>
             <PropertyRef Name="SubjectId" />
           </Key>
-          <Property Name="SubjectId" Type="Int32" Nullable="false" />
+          <Property Name="SubjectId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="SubjectName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Chapters" Relationship="QingNiaoModel.FK_Chapter_Subject" FromRole="Subject" ToRole="Chapter" />
+          <NavigationProperty Name="Chapters" Relationship="HomeWorkModel.FK_Chapter_Subject" FromRole="Subject" ToRole="Chapter" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -479,19 +500,20 @@
           <Property Name="TeacherName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="PassWord" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Stauts" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Classes" Relationship="QingNiaoModel.FK__Class__TeacherId__145C0A3F" FromRole="Teacher" ToRole="Class" />
+          <NavigationProperty Name="Classes" Relationship="HomeWorkModel.FK__Class__TeacherId__145C0A3F" FromRole="Teacher" ToRole="Class" />
         </EntityType>
         <EntityType Name="UploadFile">
           <Key>
             <PropertyRef Name="UploadFileId" />
           </Key>
-          <Property Name="UploadFileId" Type="Int32" Nullable="false" />
-          <Property Name="UploadFileType" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="UploadFileId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="UploadFileName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="UploadFilePath" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Describe" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_UploadFile" FromRole="UploadFile" ToRole="Homework" />
+          <Property Name="StudentNo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_UploadFile" FromRole="UploadFile" ToRole="Homework" />
+          <NavigationProperty Name="Student" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="UploadFile" ToRole="Student" />
         </EntityType>
         <EntityType Name="YXZJ">
           <Key>
@@ -502,11 +524,11 @@
           <Property Name="Y_NotHave" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="Z_Have" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="Z_NotHave" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Homework" Relationship="QingNiaoModel.FK_Homework_YXZJ" FromRole="YXZJ" ToRole="Homework" />
+          <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_YXZJ" FromRole="YXZJ" ToRole="Homework" />
         </EntityType>
         <Association Name="FK_Chapter_Subject">
-          <End Role="Subject" Type="QingNiaoModel.Subject" Multiplicity="1" />
-          <End Role="Chapter" Type="QingNiaoModel.Chapter" Multiplicity="*" />
+          <End Role="Subject" Type="HomeWorkModel.Subject" Multiplicity="1" />
+          <End Role="Chapter" Type="HomeWorkModel.Chapter" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Subject">
               <PropertyRef Name="SubjectId" />
@@ -517,8 +539,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Chapter">
-          <End Role="Chapter" Type="QingNiaoModel.Chapter" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="Chapter" Type="HomeWorkModel.Chapter" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Chapter">
               <PropertyRef Name="ChapterId" />
@@ -529,8 +551,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Class__GradeId__1DE57479">
-          <End Role="Grade" Type="QingNiaoModel.Grade" Multiplicity="1" />
-          <End Role="Class" Type="QingNiaoModel.Class" Multiplicity="*" />
+          <End Role="Grade" Type="HomeWorkModel.Grade" Multiplicity="1" />
+          <End Role="Class" Type="HomeWorkModel.Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grade">
               <PropertyRef Name="Id" />
@@ -541,8 +563,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Class__TeacherId__145C0A3F">
-          <End Role="Teacher" Type="QingNiaoModel.Teacher" Multiplicity="1" />
-          <End Role="Class" Type="QingNiaoModel.Class" Multiplicity="*" />
+          <End Role="Teacher" Type="HomeWorkModel.Teacher" Multiplicity="1" />
+          <End Role="Class" Type="HomeWorkModel.Class" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Teacher">
               <PropertyRef Name="TeacherId" />
@@ -553,8 +575,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Student__ClassId__164452B1">
-          <End Role="Class" Type="QingNiaoModel.Class" Multiplicity="0..1" />
-          <End Role="Student" Type="QingNiaoModel.Student" Multiplicity="*" />
+          <End Role="Class" Type="HomeWorkModel.Class" Multiplicity="0..1" />
+          <End Role="Student" Type="HomeWorkModel.Student" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Class">
               <PropertyRef Name="ClassId" />
@@ -565,8 +587,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_HomeworkType">
-          <End Role="HomeworkType" Type="QingNiaoModel.HomeworkType" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="HomeworkType" Type="HomeWorkModel.HomeworkType" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HomeworkType">
               <PropertyRef Name="HomeworkTypeId" />
@@ -577,8 +599,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Score">
-          <End Role="Score" Type="QingNiaoModel.Score" Multiplicity="0..1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="Score" Type="HomeWorkModel.Score" Multiplicity="0..1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Score">
               <PropertyRef Name="ScoreId" />
@@ -589,20 +611,20 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Student">
-          <End Role="Student" Type="QingNiaoModel.Student" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="Student" Type="HomeWorkModel.Student" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Student">
               <PropertyRef Name="StudentNo" />
             </Principal>
             <Dependent Role="Homework">
-              <PropertyRef Name="StudentId" />
+              <PropertyRef Name="StudentNo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_UploadFile">
-          <End Role="UploadFile" Type="QingNiaoModel.UploadFile" Multiplicity="1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="UploadFile" Type="HomeWorkModel.UploadFile" Multiplicity="1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UploadFile">
               <PropertyRef Name="UploadFileId" />
@@ -613,8 +635,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_YXZJ">
-          <End Role="YXZJ" Type="QingNiaoModel.YXZJ" Multiplicity="0..1" />
-          <End Role="Homework" Type="QingNiaoModel.Homework" Multiplicity="*" />
+          <End Role="YXZJ" Type="HomeWorkModel.YXZJ" Multiplicity="0..1" />
+          <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="YXZJ">
               <PropertyRef Name="YXZJId" />
@@ -624,14 +646,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UploadFile_Student">
+          <End Role="Student" Type="HomeWorkModel.Student" Multiplicity="1" />
+          <End Role="UploadFile" Type="HomeWorkModel.UploadFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Student">
+              <PropertyRef Name="StudentNo" />
+            </Principal>
+            <Dependent Role="UploadFile">
+              <PropertyRef Name="StudentNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QingNiaoModelStoreContainer" CdmEntityContainer="QingNiaoEntities">
+        <EntityContainerMapping StorageEntityContainer="HomeWorkModelStoreContainer" CdmEntityContainer="HomeWorkEntities">
           <EntitySetMapping Name="Administrators">
-            <EntityTypeMapping TypeName="QingNiaoModel.Administrator">
+            <EntityTypeMapping TypeName="HomeWorkModel.Administrator">
               <MappingFragment StoreEntitySet="Administrator">
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
                 <ScalarProperty Name="AdminName" ColumnName="AdminName" />
@@ -640,7 +674,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Chapters">
-            <EntityTypeMapping TypeName="QingNiaoModel.Chapter">
+            <EntityTypeMapping TypeName="HomeWorkModel.Chapter">
               <MappingFragment StoreEntitySet="Chapter">
                 <ScalarProperty Name="ChapterId" ColumnName="ChapterId" />
                 <ScalarProperty Name="ChapterName" ColumnName="ChapterName" />
@@ -649,7 +683,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Classes">
-            <EntityTypeMapping TypeName="QingNiaoModel.Class">
+            <EntityTypeMapping TypeName="HomeWorkModel.Class">
               <MappingFragment StoreEntitySet="Class">
                 <ScalarProperty Name="ClassId" ColumnName="ClassId" />
                 <ScalarProperty Name="ClassName" ColumnName="ClassName" />
@@ -661,7 +695,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Grades">
-            <EntityTypeMapping TypeName="QingNiaoModel.Grade">
+            <EntityTypeMapping TypeName="HomeWorkModel.Grade">
               <MappingFragment StoreEntitySet="Grade">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="GradeName" ColumnName="GradeName" />
@@ -669,22 +703,22 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Homework">
-            <EntityTypeMapping TypeName="QingNiaoModel.Homework">
+            <EntityTypeMapping TypeName="HomeWorkModel.Homework">
               <MappingFragment StoreEntitySet="Homework">
                 <ScalarProperty Name="HomeworkId" ColumnName="HomeworkId" />
-                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
                 <ScalarProperty Name="ChapterId" ColumnName="ChapterId" />
                 <ScalarProperty Name="HomeworkTypeId" ColumnName="HomeworkTypeId" />
                 <ScalarProperty Name="ScoreId" ColumnName="ScoreId" />
                 <ScalarProperty Name="Comment" ColumnName="Comment" />
                 <ScalarProperty Name="YXZJId" ColumnName="YXZJId" />
-                <ScalarProperty Name="UploadFileId" ColumnName="UploadFileId" />
                 <ScalarProperty Name="Speed" ColumnName="Speed" />
+                <ScalarProperty Name="UploadFileId" ColumnName="UploadFileId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HomeworkTypes">
-            <EntityTypeMapping TypeName="QingNiaoModel.HomeworkType">
+            <EntityTypeMapping TypeName="HomeWorkModel.HomeworkType">
               <MappingFragment StoreEntitySet="HomeworkType">
                 <ScalarProperty Name="HomeworkTypeId" ColumnName="HomeworkTypeId" />
                 <ScalarProperty Name="HomeworkName" ColumnName="HomeworkName" />
@@ -692,7 +726,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Scores">
-            <EntityTypeMapping TypeName="QingNiaoModel.Score">
+            <EntityTypeMapping TypeName="HomeWorkModel.Score">
               <MappingFragment StoreEntitySet="Score">
                 <ScalarProperty Name="ScoreId" ColumnName="ScoreId" />
                 <ScalarProperty Name="ScoreName" ColumnName="ScoreName" />
@@ -700,7 +734,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Students">
-            <EntityTypeMapping TypeName="QingNiaoModel.Student">
+            <EntityTypeMapping TypeName="HomeWorkModel.Student">
               <MappingFragment StoreEntitySet="Student">
                 <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
                 <ScalarProperty Name="StudentId" ColumnName="StudentId" />
@@ -724,7 +758,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Subjects">
-            <EntityTypeMapping TypeName="QingNiaoModel.Subject">
+            <EntityTypeMapping TypeName="HomeWorkModel.Subject">
               <MappingFragment StoreEntitySet="Subject">
                 <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
                 <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
@@ -732,7 +766,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Teachers">
-            <EntityTypeMapping TypeName="QingNiaoModel.Teacher">
+            <EntityTypeMapping TypeName="HomeWorkModel.Teacher">
               <MappingFragment StoreEntitySet="Teacher">
                 <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
                 <ScalarProperty Name="TeacherNo" ColumnName="TeacherNo" />
@@ -743,19 +777,19 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UploadFiles">
-            <EntityTypeMapping TypeName="QingNiaoModel.UploadFile">
+            <EntityTypeMapping TypeName="HomeWorkModel.UploadFile">
               <MappingFragment StoreEntitySet="UploadFile">
                 <ScalarProperty Name="UploadFileId" ColumnName="UploadFileId" />
-                <ScalarProperty Name="UploadFileType" ColumnName="UploadFileType" />
                 <ScalarProperty Name="UploadFileName" ColumnName="UploadFileName" />
                 <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
                 <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
                 <ScalarProperty Name="Describe" ColumnName="Describe" />
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="YXZJs">
-            <EntityTypeMapping TypeName="QingNiaoModel.YXZJ">
+            <EntityTypeMapping TypeName="HomeWorkModel.YXZJ">
               <MappingFragment StoreEntitySet="YXZJ">
                 <ScalarProperty Name="YXZJId" ColumnName="YXZJId" />
                 <ScalarProperty Name="Y_Have" ColumnName="Y_Have" />

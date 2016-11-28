@@ -13,10 +13,10 @@ namespace HomeWork.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QingNiaoEntities : DbContext
+    public partial class HomeWorkEntities : DbContext
     {
-        public QingNiaoEntities()
-            : base("name=QingNiaoEntities")
+        public HomeWorkEntities()
+            : base("name=HomeWorkEntities")
         {
         }
     

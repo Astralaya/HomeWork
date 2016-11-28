@@ -17,6 +17,7 @@ namespace HomeWork.Model
         public Student()
         {
             this.Homework = new HashSet<Homework>();
+            this.UploadFiles = new HashSet<UploadFile>();
         }
     
         public int StudentNo { get; set; }
@@ -40,5 +41,6 @@ namespace HomeWork.Model
     
         public virtual Class Class { get; set; }
         public virtual ICollection<Homework> Homework { get; set; }
+        public virtual ICollection<UploadFile> UploadFiles { get; set; }
     }
 }

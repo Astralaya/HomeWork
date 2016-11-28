@@ -9,7 +9,7 @@ namespace HomeWork.DAL
 {
     public class Student
     {
-        QingNiaoEntities context = new QingNiaoEntities();
+        HomeWorkEntities context = new HomeWorkEntities();
         /// <summary>
         /// 检查学生是否存在
         /// </summary>

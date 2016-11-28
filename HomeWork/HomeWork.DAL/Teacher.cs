@@ -12,7 +12,7 @@ namespace HomeWork.DAL
     /// </summary>
     public class Teacher
     {
-        QingNiaoEntities context = new QingNiaoEntities();
+        HomeWorkEntities context = new HomeWorkEntities();
         /// <summary>
         /// 教员登录
         /// </summary>

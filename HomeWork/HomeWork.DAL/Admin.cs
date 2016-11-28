@@ -12,7 +12,7 @@ namespace HomeWork.DAL
     /// </summary>
     public class Admin
     {
-        QingNiaoEntities context = new QingNiaoEntities();
+        HomeWorkEntities context = new HomeWorkEntities();
         /// <summary>
         /// 管理员登录
         /// </summary>
