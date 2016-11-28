@@ -13,6 +13,7 @@ namespace HomeWork.Controllers
 
         public ActionResult Index()
         {
+
             return View();
         }
 

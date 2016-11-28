@@ -20,12 +20,20 @@ namespace HomeWork.DAL
             return context.Students.SingleOrDefault(s => s.StudentName == lu.UserName && s.Password == lu.Password);
         }
         /// <summary>
-        /// 查询书本下拉框
+        /// 查询书本
         /// </summary>
         /// <returns></returns>
-        public List<Chapter> selectChapter()
+        public List<Model.Subject> selectSubjects()
         {
-            return context.Chapters.ToList();
+            return context.Subjects.ToList();
+        }
+        /// <summary>
+        /// /查询作业类型
+        /// </summary>
+        /// <returns></returns>
+        public List<Model.HomeworkType> selectType()
+        {
+            return context.HomeworkTypes.ToList();
         }
         /// <summary>
         /// 查询预习总结

@@ -14,9 +14,13 @@ namespace HomeWork.BLL
         {
             return student.existUser(lu);
         }
-        public List<Chapter> selectChapter() 
+        public List<Model.HomeworkType> selectType()
         {
-            return student.selectChapter();
+            return student.selectType();
+        }
+        public List<Subject> selectSubjects() 
+        {
+            return student.selectSubjects();
         }
         public List<QueryHomeWork> selectYuxi(int studentNo, int chapterId)
         {

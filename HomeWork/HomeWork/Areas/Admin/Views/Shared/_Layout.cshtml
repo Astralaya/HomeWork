@@ -3,11 +3,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script src="~/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/bootstrap-3.3.0/nav23/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/bootstrap-3.3.0/nav23/js/jquery-1.7.2.min.js"></script>
+    <link href="~/bootstrap-3.3.0/nav23/css/style.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div>
-
+        <div>
+            <div style="float: left">
+                <img src="~/image/Log.png" />
+            </div>
+            <div style="float: right">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#">刷新</a></li>
+                    <li role="presentation"><a href="#">主页</a></li>
+                    <li role="presentation"><a href="#">问题反馈</a></li>
+                </ul>
+            </div>
+        </div>
         @RenderBody()
     </div>
 </body>

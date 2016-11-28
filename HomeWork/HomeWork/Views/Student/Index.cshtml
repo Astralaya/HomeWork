@@ -1,31 +1,61 @@
-﻿@model HomeWork.Model.Chapter
-@{
+﻿@{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<hr />
+<div class="carousel slide" style="height: 40px">
+    <span style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    @*<ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">@Ajax.ActionLink("查询作业情况", "List", "Student", new AjaxOptions() { OnSuccess = "a" }, new { Class = "" })</li>
+        <li role="presentation">@Ajax.ActionLink("上机练习", "Lianxi", "Student", new AjaxOptions() { OnSuccess = "a" })</li>
+        <li role="presentation">@Ajax.ActionLink("云题库", "Yuntiku", "Student", new AjaxOptions() { OnSuccess = "a" })</li>
+        <li role="presentation">@Ajax.ActionLink("预习总结", "Yuxi", "Student", new AjaxOptions() { OnSuccess = "a" })</li>
+    </ul>*@
+    <!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist"  id="myTab">
+  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+</ul>
 
-<div style="float: left; width: 300px; height: 800px; border-right: solid 1px; text-align: center">
-    <a style="font-size: 18px">查询作业情况</a>
-    <br />
-    作业类型:<select name="homeworkType">
-        <option value="1">预习总结</option>
-        <option value="2">云题库</option>
-        <option value="3">上机练习</option>
-    </select>
-    <br />
-    选择书本:@Html.DropDownList("chapterId", (SelectList)ViewBag.list, "请选择")
-    <div style="text-align:center;width:48px">
-        @Ajax.ActionLink("查询", "Yuxi", "Student", new AjaxOptions() {  OnSuccess="yuxi"})
-    </div>
 </div>
-<div style="text-align:center">
-    <div style="height:100px"></div>
-    <div class="a">学员作业查询</div>
+<br />
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+        <div style="float: left; width: 350px; height: 800px; border-right: solid 1px; text-align: center">
+            <h1 style="font-size: 30px">查询作业</h1>
+            <div style="height: 30px"></div>
+            作业类型:@Html.DropDownList("HomeworkTypeId", (SelectList)ViewBag.typelist, "请选择", new { id = "type" })
+            <div style="height: 30px"></div>
+            选择书本:@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, "请选择", new { id = "subject" })
+            <div style="height: 30px"></div>
+            <div style="text-align: center; width: 48px">
+                @Ajax.ActionLink("查询", "Yuxi", "Student", new AjaxOptions() { OnSuccess = "yuxi" }, new { id = "query" })
+            </div>
+        </div>
+        <div style="text-align: center">
+            <div style="height: 100px"></div>
+            <div class="a">学员作业查询</div>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">12312312312</div>
+    <div role="tabpanel" class="tab-pane" id="messages">12312312312</div>
+    <div role="tabpanel" class="tab-pane" id="settings">1231312312312</div>
 </div>
 <script>
-    function yuxi(data)
-    {
+    function yuxi(data) {
         $(".a").html(data);
     }
+
+    $("#query").click(function () {
+        var type = $("#type").find("option:selected").val();
+        var subject = $("#subject").find("option:selected").val();
+
+    });
+    $('#myTab a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
 
 </script>

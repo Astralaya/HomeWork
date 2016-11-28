@@ -1,47 +1,47 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-<link href="~/css/font.css" rel="stylesheet" />
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-<<<<<<< HEAD
-    <script src="~/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
-    <link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-=======
->>>>>>> 2fc85c15a30f753ee40be9fbd60bf08d902a3701
-    <title>Index</title>
-</head>
-<body>
+<div>
     <div>
         <div style="border-bottom: solid 2px;">
-<<<<<<< HEAD
 
             <div class="page-header">
-                <h1 style="font-family:楷体;font-weight:600">管理员<small>系统管理</small></h1>
+                <h1 style="font-family: 楷体; font-weight: 600">管理员<small>系统管理</small></h1>
             </div>
 
             <div style="text-align: right">欢迎小明，<a href="#" style="text-decoration: none;">切换用户</a>  <a href="#" style="text-decoration: none;">退出</a></div>
         </div>
-        <div style="float: left; border-right: solid 2px; width: 200px; height: 850px">
-            <h1>基本设置</h1>
+        <div style="float: left; border-right: solid 2px; width: 400px; height: 850px">
+            <div class="tree well">
+                <ul style="height: 800px">
+                    <li class="parent_li">
+                        <span title="Collapse this branch"><i class="icon-folder-open"></i>基本设置</span>
+                        <ul>
+                            <li class="parent_li">
+                                <span title="Collapse this branch"><i class="icon-minus-sign"></i>上传设置</span>
+                                <ul>
+                                    <li>
+                                        <span><i class="icon-leaf"></i>预习总结</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="icon-leaf"></i>上机练习</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="icon-leaf"></i>云题库</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div style="text-align: center">
             <div style="height: 200px"></div>
-=======
-            <h1 style="padding-left:20px;padding:0px;margin:0px;">&nbsp;&nbsp;管理员</h1>
-            <div style="text-align:right">欢迎小明，<a href="#" style="text-decoration: none;">切换用户</a>  <a href="#" style="text-decoration: none;">退出</a></div>
-        </div>
-        <div style="float:left;border-right: solid 2px;width:200px;height:850px">
-            <h1>基本设置</h1>
-        </div>
-        <div style="text-align:center">
-            <div style="height:200px"> </div>
->>>>>>> 2fc85c15a30f753ee40be9fbd60bf08d902a3701
-            文件大小：<input type="text" />
+            <h1>系统管理
+            </h1>
         </div>
     </div>
-</body>
-</html>
+</div>

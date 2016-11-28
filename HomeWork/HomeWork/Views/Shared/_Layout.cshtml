@@ -3,14 +3,49 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+     <link href="~/css/core[1].css" rel="stylesheet" />
+    <link href="~/css/style[1].css" rel="stylesheet" />
+    <link href="~/css/font.css" rel="stylesheet" />
+    <script src="~/js/jquery-2.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div>
+        <div style="float: left">
+            <img src="~/image/Log.png" />
+        </div>
+        <div style="float: right">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#">刷新</a></li>
+                    <li role="presentation"><a href="#">主页</a></li>
+                    <li role="presentation"><a href="#">问题反馈</a></li>
+                </ul>
+            </div>
+    </div>
+    <br />
+    <br />
+    <div class="carousel slide" style="height:40px"><span style="float:left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+     
+
+    </div>
+    <br />
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+     <script>
+         $.ajaxSetup({ cache: false });
+         function a(data) {
+             $(".a").html(data);
+         }
+    </script>
 </body>
 </html>

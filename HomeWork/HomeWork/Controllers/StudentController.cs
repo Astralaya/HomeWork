@@ -15,8 +15,13 @@ namespace HomeWork.Controllers
 
         public ActionResult Index()
         {
-            List<Chapter> chap = student.selectChapter();
-            SelectList list = new SelectList(chap, "ChapterId", "ChapterName");
+            //作业类型下拉框
+            List<HomeworkType> type = student.selectType();
+            SelectList typelist = new SelectList(type, "HomeworkTypeId", "HomeworkName");
+            ViewBag.typelist = typelist;
+            //书本下拉框
+            List<Subject> subjects = student.selectSubjects();
+            SelectList list = new SelectList(subjects, "SubjectId", "SubjectName");
             ViewBag.list = list;
             return View();
         }
