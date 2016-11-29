@@ -571,6 +571,23 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="uploader-master\AUTHORS.txt" />
+    <Content Include="uploader-master\demos\css\demo.css" />
+    <Content Include="uploader-master\demos\css\images\dark-bg.png" />
+    <Content Include="uploader-master\demos\css\simple-demo.css" />
+    <Content Include="uploader-master\demos\css\uploader.css" />
+    <Content Include="uploader-master\demos\image-preview.html" />
+    <Content Include="uploader-master\demos\index.html" />
+    <Content Include="uploader-master\demos\js\demo-preview.js" />
+    <Content Include="uploader-master\demos\js\demo-preview.min.js" />
+    <Content Include="uploader-master\demos\js\demo.js" />
+    <Content Include="uploader-master\demos\js\demo.min.js" />
+    <Content Include="uploader-master\demos\simple.html" />
+    <Content Include="uploader-master\GPL-LICENSE.txt" />
+    <Content Include="uploader-master\MIT-LICENSE.txt" />
+    <Content Include="uploader-master\src\dmuploader.js" />
+    <Content Include="uploader-master\src\dmuploader.min.js" />
+    <Content Include="uploader-master\TODO.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -590,6 +607,9 @@
     <Content Include="Views\Student\Yuntiku.cshtml" />
     <Content Include="Views\Student\Yuxi.cshtml" />
     <Content Include="Views\Student\WorkList.cshtml" />
+    <Content Include="uploader-master\demos\upload.php" />
+    <Content Include="uploader-master\dmuploader.jquery.json" />
+    <Content Include="uploader-master\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

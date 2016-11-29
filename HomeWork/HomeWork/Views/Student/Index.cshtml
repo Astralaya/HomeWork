@@ -13,17 +13,17 @@
     </ul>*@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist" id="myTab">
-        <li style="width: 300px; text-align: center" role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">查询作业情况</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#profile" role="tab" data-toggle="tab">上机练习</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#messages" role="tab" data-toggle="tab">云题库</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#settings" role="tab" data-toggle="tab">预习总结</a></li>
+        <li style="width: 300px; text-align: center" role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab" class="glyphicon glyphicon-search"> 查询作业情况</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#profile" role="tab" data-toggle="tab" class="glyphicon glyphicon-file"> 上机练习</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#messages" role="tab" data-toggle="tab" class="glyphicon glyphicon-camera"> 云题库</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#settings" role="tab" data-toggle="tab" class="glyphicon glyphicon-pencil"> 预习总结</a></li>
     </ul>
 
 </div>
 <br />
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="home">
-        <div style="float: left; width: 350px; height: 800px; border-right: solid 1px; text-align: center">
+        <div style="float: left; width: 350px; height: 650px; border-right: solid 1px; text-align: center">
             <form action="@Url.Action("ChaXun", "Student")"  method="post" target="id_iframe" >
                 <h1 style="font-size: 30px">查询作业</h1>
                 <div style="height: 30px"></div>
@@ -51,32 +51,285 @@
             @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <table>
-                    <tr style="height:80px">
-                        <td>你最大可以上传10MB的文件: </td>
+                    <tr style="height: 50px">
+                        <td>书本选择: </td>
                         <td>
-                            <input type="text" disabled="disabled" />
-                            <input style="display: inline" type="file" name="file" />
+                            <select>
+                                <option>请选择</option>
+                            </select>
                         </td>
                     </tr>
-                    <tr style="height:80px">
-                        <td>给作业起个名(10字以内): </td>
-                        <td><input type="text" name="name" /></td>
+                    <tr style="height: 50px">
+                        <td>章节选择: </td>
+                        <td>
+                            <select>
+                                 <option>请选择</option>
+                            </select>
+                        </td>
                     </tr>
-                    <tr style="height:80px">
-                        <td>给作业起个名(10字以内): </td>
-                        <td><input type="text" name="name" /></td>
+                    <tr style="height: 50px">
+                        <td>选择文件(10M以内): </td>
+                        <td>
+                            <input type="file" name="file" />
+                        </td>
                     </tr>
-                     <tr style="height:80px">
-                        <td colspan="2">
-                            <input type="submit" value="提交" />
+                    <tr style="height: 50px">
+                        <td>作业名称: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>完成度: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>描述: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 80px">
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px" />
                         </td>
                     </tr>
                 </table>
             }
         </div>
+        <div style="height: 200px"></div>
+        <div style="float: left; width: 400px;">
+            <span class="glyphicon glyphicon-asterisk">上传须知:</span>
+            <ul style="list-style:none">
+                <li><span class="glyphicon glyphicon-chevron-right"> 请勿上传小说、mp3、视频等与技术无关的内容!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有雷同，抄袭等情况，一旦发现将被删除!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有作业不能正确提交的情况请与管理员联系</span></li>
+
+            </ul>
+        </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="messages">12312312312</div>
-    <div role="tabpanel" class="tab-pane" id="settings">1231312312312</div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+        <div style="height: 100px">学员作业登记系统>云题库>上传图片</div>
+        <div style="float: left; width: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        @*<div style="width: 800px; height: 200px;">
+            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <table>
+                    <tr style="height: 50px">
+                        <td>选择文件(10M以内): </td>
+                        <td>
+                            <input type="file" name="file" />
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>作业名称: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>完成度: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>描述: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 80px">
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px" data-toggle="tooltip" data-placement="left" title="Tooltip on left"/>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>*@
+
+    <div class="container demo-wrapper">
+      <div class="page-header">
+        <h1>云题库 <small>上传图片</small></h1>
+      </div>
+    
+      <div class="row demo-columns">
+        <div class="col-md-6">
+          <!-- D&D Zone-->
+          <div id="drag-and-drop-zone" class="uploader">
+            <div>选择 &amp; 拖拽文件</div>
+            <div class="or">-or-</div>
+            <div class="browser">
+              <label>
+                <span>选择文件</span>
+                <input type="file" name="files[]" multiple="multiple" title='Click to add Files'>
+              </label>
+            </div>
+          </div>
+          <!-- /D&D Zone -->
+
+          <!-- Debug box -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Debug</h3>
+            </div>
+            <div class="panel-body demo-panel-debug">
+              <ul id="demo-debug">
+              </ul>
+            </div>
+          </div>
+          <!-- /Debug box -->
+        </div>
+        <!-- / Left column -->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Uploads</h3>
+            </div>
+            <div class="panel-body demo-panel-files" id='demo-files'>
+              <span class="demo-note">No Files have been selected/droped yet...</span>
+            </div>
+          </div>
+        </div>
+        <!-- / Right column -->
+      </div>
+
+      <div class="alert alert-info">
+        Read the Blog Article and Source code for this Example here: 
+        <a href="#">http://blog.daniel.com.uy/2014/01/31/jquery-drag-and-drop-progress-files.html</a>
+      </div>
+
+      <div class="demo-footer">
+        <p>&copy; Daniel Morales 2014</p>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+@*    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>*@
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+
+@*    <script type="text/javascript" src="../demos/js/demo.min.js"></script>
+    <script type="text/javascript" src="../../src/dmuploader.min.js"></script>*@
+
+    <script type="text/javascript">
+        $('#drag-and-drop-zone').dmUploader({
+            url: '/demos/dnd/upload.php',
+            dataType: 'json',
+            allowedTypes: 'image/*',
+            /*extFilter: 'jpg;png;gif',*/
+            onInit: function () {
+                $.danidemo.addLog('#demo-debug', 'default', 'Plugin initialized correctly');
+            },
+            onBeforeUpload: function (id) {
+                $.danidemo.addLog('#demo-debug', 'default', 'Starting the upload of #' + id);
+
+                $.danidemo.updateFileStatus(id, 'default', 'Uploading...');
+            },
+            onNewFile: function (id, file) {
+                $.danidemo.addFile('#demo-files', id, file);
+            },
+            onComplete: function () {
+                $.danidemo.addLog('#demo-debug', 'default', 'All pending tranfers completed');
+            },
+            onUploadProgress: function (id, percent) {
+                var percentStr = percent + '%';
+
+                $.danidemo.updateFileProgress(id, percentStr);
+            },
+            onUploadSuccess: function (id, data) {
+                $.danidemo.addLog('#demo-debug', 'success', 'Upload of file #' + id + ' completed');
+
+                $.danidemo.addLog('#demo-debug', 'info', 'Server Response for file #' + id + ': ' + JSON.stringify(data));
+
+                $.danidemo.updateFileStatus(id, 'success', 'Upload Complete');
+
+                $.danidemo.updateFileProgress(id, '100%');
+            },
+            onUploadError: function (id, message) {
+                $.danidemo.updateFileStatus(id, 'error', message);
+
+                $.danidemo.addLog('#demo-debug', 'error', 'Failed to Upload file #' + id + ': ' + message);
+            },
+            onFileTypeError: function (file) {
+                $.danidemo.addLog('#demo-debug', 'error', 'File \'' + file.name + '\' cannot be added: must be an image');
+            },
+            onFileSizeError: function (file) {
+                $.danidemo.addLog('#demo-debug', 'error', 'File \'' + file.name + '\' cannot be added: size excess limit');
+            },
+            /*onFileExtError: function(file){
+              $.danidemo.addLog('#demo-debug', 'error', 'File \'' + file.name + '\' has a Not Allowed Extension');
+            },*/
+            onFallbackMode: function (message) {
+                $.danidemo.addLog('#demo-debug', 'info', 'Browser not supported(do something else here!): ' + message);
+            }
+        });
+    </script>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+        <div role="tabpanel" class="tab-pane" id="profile">
+        <div style="float: left; width: 50px; height: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="height: 100px">学员作业登记系统>上机练习>上传作业</div>
+        <div style="float: left; width: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="width: 800px; height: 200px;">
+            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <table>
+                    <tr style="height: 50px">
+                        <td>书本选择: </td>
+                        <td>
+                            <select>
+                                <option>请选择</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>章节选择: </td>
+                        <td>
+                            <select>
+                                 <option>请选择</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>选择文件(10M以内): </td>
+                        <td>
+                            <input type="file" name="file" />
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>作业名称: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>完成度: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>描述: </td>
+                        <td>
+                            <input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height: 80px">
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+        <div style="height: 200px"></div>
+        <div style="float: left; width: 400px;">
+            <span class="glyphicon glyphicon-asterisk">上传须知:</span>
+            <ul style="list-style:none">
+                <li><span class="glyphicon glyphicon-chevron-right"> 请勿上传小说、mp3、视频等与技术无关的内容!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有雷同，抄袭等情况，一旦发现将被删除!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有作业不能正确提交的情况请与管理员联系</span></li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
 </div>
 <script>
     function yuxi(data) {
