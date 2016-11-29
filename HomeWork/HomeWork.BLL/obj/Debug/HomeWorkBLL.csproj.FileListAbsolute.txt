@@ -34,3 +34,15 @@ D:\试机\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\zh-Hans\EntityFramework.resou
 D:\试机\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWorkBLL.csprojResolveAssemblyReference.cache
 D:\试机\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.dll
 D:\试机\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.pdb
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.BLL.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.BLL.pdb
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.DAL.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.Model.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\EntityFramework.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.DAL.pdb
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\HomeWork.Model.pdb
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\EntityFramework.xml
+E:\HomeWork\HomeWork\HomeWork.BLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWorkBLL.csprojResolveAssemblyReference.cache
+E:\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.dll
+E:\HomeWork\HomeWork\HomeWork.BLL\obj\Debug\HomeWork.BLL.pdb

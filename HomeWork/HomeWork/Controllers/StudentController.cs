@@ -29,25 +29,35 @@ namespace HomeWork.Controllers
         {
             return PartialView("List");
         }
+        public ActionResult ChaXun(int HomeworkTypeId, int subjectId)
+        {
+            int studentNo = Convert.ToInt32(this.User.Identity.Name);
+            //预习总结
+            if (HomeworkTypeId == 1)
+            {
+                List<QueryHomeWork> list = student.selectYuxi(studentNo, subjectId);
+                ViewBag.yuxi = list;
+                return PartialView("WorkList");
+            }
+            //上机练习
+            if (HomeworkTypeId == 2)
+            {
+                return PartialView("WorkList");
+            }
+            //云题库
+            if (HomeworkTypeId == 3)
+            {
+                return PartialView("WorkList");
+            }
+
+            return PartialView("error");
+        }
         public ActionResult Yuxi()
         {
-            //if (homeworkType == 1)
-            //{
-            //    //List<QueryHomeWork> list = student.selectYuxi(studentNo, chapterId);
-            //    //ViewBag.yuxi = list;
-            //    return PartialView("Yuxi");
-            //}
-            //if (homeworkType == 2)
-            //{
-            //    return PartialView("Yuxi");
-            //}
-            //if (homeworkType == 3)
-            //{
-            //    return PartialView("Yuxi");
-            //}
 
-            return PartialView("Yuxi");
+            return PartialView("Yuntiku");
         }
+
         public ActionResult Yuntiku()
         {
             return PartialView("Yuntiku");

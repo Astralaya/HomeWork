@@ -549,16 +549,13 @@
     <Content Include="bootstrap-3.3.0\test-infra\uncached-npm-install.sh" />
     <Content Include="bootstrap-3.3.0\_config.yml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="js\jquery-2.1.1\jquery插件库.url" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="image\01.jpg" />
     <Content Include="image\02.jpg" />
     <Content Include="image\03.jpg" />
     <Content Include="image\Log.png" />
     <Content Include="js\index.js" />
-    <Content Include="js\jquery-2.1.1\jquery.js" />
-    <Content Include="js\jquery-2.1.1\jquery.min.js" />
-    <Content Include="js\jquery-2.1.1\www.jq22.com.txt" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -592,6 +589,7 @@
     <Content Include="Views\Student\Lianxi.cshtml" />
     <Content Include="Views\Student\Yuntiku.cshtml" />
     <Content Include="Views\Student\Yuxi.cshtml" />
+    <Content Include="Views\Student\WorkList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

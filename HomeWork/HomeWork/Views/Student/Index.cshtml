@@ -12,34 +12,69 @@
         <li role="presentation">@Ajax.ActionLink("预习总结", "Yuxi", "Student", new AjaxOptions() { OnSuccess = "a" })</li>
     </ul>*@
     <!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist"  id="myTab">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-</ul>
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+        <li style="width: 300px; text-align: center" role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">查询作业情况</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#profile" role="tab" data-toggle="tab">上机练习</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#messages" role="tab" data-toggle="tab">云题库</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#settings" role="tab" data-toggle="tab">预习总结</a></li>
+    </ul>
 
 </div>
 <br />
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="home">
         <div style="float: left; width: 350px; height: 800px; border-right: solid 1px; text-align: center">
-            <h1 style="font-size: 30px">查询作业</h1>
-            <div style="height: 30px"></div>
-            作业类型:@Html.DropDownList("HomeworkTypeId", (SelectList)ViewBag.typelist, "请选择", new { id = "type" })
-            <div style="height: 30px"></div>
-            选择书本:@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, "请选择", new { id = "subject" })
-            <div style="height: 30px"></div>
-            <div style="text-align: center; width: 48px">
-                @Ajax.ActionLink("查询", "Yuxi", "Student", new AjaxOptions() { OnSuccess = "yuxi" }, new { id = "query" })
-            </div>
+            <form action="@Url.Action("ChaXun", "Student")"  method="post" target="id_iframe" >
+                <h1 style="font-size: 30px">查询作业</h1>
+                <div style="height: 30px"></div>
+                作业类型:@Html.DropDownList("HomeworkTypeId", (SelectList)ViewBag.typelist, "请选择", new { id = "type" })
+                <div style="height: 30px"></div>
+                选择书本:@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, "请选择", new { id = "subject" })
+                <div style="height: 30px"></div>
+                <div style="text-align: center; width: 48px">
+                </div>
+                <input type="submit" onclick="yuxi" value="查询" class="btn btn-primary btn-lg" />
+            </form>
         </div>
         <div style="text-align: center">
             <div style="height: 100px"></div>
-            <div class="a">学员作业查询</div>
+            <div class="a">
+                <iframe id="id_iframe" name="id_iframe" style="width: 800px; height: 400px; border: 0px"></iframe>
+            </div>
         </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="profile">12312312312</div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <div style="float: left; width: 50px; height: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="height: 100px">学员作业登记系统>上机练习>上传作业</div>
+        <div style="float: left; width: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="width: 800px; height: 200px;">
+            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <table>
+                    <tr style="height:80px">
+                        <td>你最大可以上传10MB的文件: </td>
+                        <td>
+                            <input type="text" disabled="disabled" />
+                            <input style="display: inline" type="file" name="file" />
+                        </td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td>给作业起个名(10字以内): </td>
+                        <td><input type="text" name="name" /></td>
+                    </tr>
+                    <tr style="height:80px">
+                        <td>给作业起个名(10字以内): </td>
+                        <td><input type="text" name="name" /></td>
+                    </tr>
+                     <tr style="height:80px">
+                        <td colspan="2">
+                            <input type="submit" value="提交" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
     <div role="tabpanel" class="tab-pane" id="messages">12312312312</div>
     <div role="tabpanel" class="tab-pane" id="settings">1231312312312</div>
 </div>
@@ -47,15 +82,4 @@
     function yuxi(data) {
         $(".a").html(data);
     }
-
-    $("#query").click(function () {
-        var type = $("#type").find("option:selected").val();
-        var subject = $("#subject").find("option:selected").val();
-
-    });
-    $('#myTab a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
 </script>

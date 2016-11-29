@@ -33,7 +33,6 @@ namespace HomeWork.Controllers
                         return View(lu);
                     }
                     FormsAuthentication.SetAuthCookie(user.StudentNo.ToString(), false);
-
                     return RedirectToAction("Index", "Student");
                 }
 

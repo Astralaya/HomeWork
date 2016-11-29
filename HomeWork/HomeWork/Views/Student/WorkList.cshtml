@@ -1,0 +1,36 @@
+﻿@using HomeWork.Model
+<div class="a" style="">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>学生名称</th>
+                <th>作业标题</th>
+                <th>时间</th>
+                <th>文件地址</th>
+                <th>评价</th>
+                <th>老师留言</th>
+                <th>完成度</th>
+                <th>作业描述</th>
+            </tr>
+        </thead>
+        @{
+            List<QueryHomeWork> list = ViewBag.yuxi as List<QueryHomeWork>;
+
+            foreach (var item in list)
+            {
+            <tbody class="table-striped">
+                <tr>
+                    <td class="info">@item.StudentName</td>
+                    <td style="width: 20px">@item.UploadFileName</td>
+                    <td>@item.UploadTime</td>
+                    <td>@item.UploadFilePath</td>
+                    <td>@item.ScoreName</td>
+                    <td>@item.Comment</td>
+                    <td>@item.Speed</td>
+                    <td>@item.Describe</td>
+                </tr>
+            </tbody>
+            }
+        }
+    </table>
+</div>

@@ -41,10 +41,10 @@ namespace HomeWork.DAL
         /// <param name="studentNo"></param>
         /// <param name="chapterId"></param>
         /// <returns></returns>
-        public List<QueryHomeWork> selectYuxi(int studentNo, int chapterId)
+        public List<QueryHomeWork> selectYuxi(int studentNo, int subjectId)
         {
             var homework = from u in context.Homework
-                           where u.StudentNo == studentNo && u.ChapterId == chapterId
+                           where u.StudentNo == studentNo && u.Chapter.Subject.SubjectId == subjectId
                            select new QueryHomeWork()
                            {
                                Comment = u.Comment,

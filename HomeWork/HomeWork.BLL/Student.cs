@@ -22,9 +22,9 @@ namespace HomeWork.BLL
         {
             return student.selectSubjects();
         }
-        public List<QueryHomeWork> selectYuxi(int studentNo, int chapterId)
+        public List<QueryHomeWork> selectYuxi(int studentNo, int subjectId)
         {
-            return student.selectYuxi(studentNo, chapterId);
+            return student.selectYuxi(studentNo, subjectId);
         }
     }
 }

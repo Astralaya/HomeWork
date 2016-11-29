@@ -31,3 +31,14 @@ D:\试机\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\zh-Hans\EntityFramework.resou
 D:\试机\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWorkDAL.csprojResolveAssemblyReference.cache
 D:\试机\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.dll
 D:\试机\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.pdb
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.dll.config
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.dll
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.DAL.pdb
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\EntityFramework.dll
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.Model.dll
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\HomeWork.Model.pdb
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\EntityFramework.xml
+E:\HomeWork\HomeWork\HomeWork.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWorkDAL.csprojResolveAssemblyReference.cache
+E:\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.dll
+E:\HomeWork\HomeWork\HomeWork.DAL\obj\Debug\HomeWork.DAL.pdb
