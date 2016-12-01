@@ -37,7 +37,7 @@ namespace HomeWork.Controllers
         /// <param name="HomeworkTypeId"></param>
         /// <param name="subjectId"></param>
         /// <returns></returns>
-        public ActionResult ChaXun(int HomeworkTypeId, int? subjectId)
+        public ActionResult ChaXun(int? HomeworkTypeId, int? subjectId)
         {
             int studentNo = Convert.ToInt32(this.User.Identity.Name);
             List<QueryHomeWork> list = student.executeQuery(studentNo, subjectId, HomeworkTypeId);
@@ -54,9 +54,24 @@ namespace HomeWork.Controllers
         {
             return PartialView("Yuntiku");
         }
-        public ActionResult Lianxi()
+        /// <summary>
+        /// 上机练习上传
+        /// </summary>
+        /// <param name="lx"></param>
+        /// <param name="uploadFilelx"></param>
+        /// <returns></returns>
+        public ActionResult Lianxi(LianXi lx, HttpPostedFileBase uploadFilelx)
         {
-            return PartialView("Lianxi");
+            lx.StudentNo = Convert.ToInt32(this.User.Identity.Name);
+            //设置文件名
+            string fileName = lx.StudentNo + "-" + DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + "-" + DateTime.Now.Millisecond + ".zip";
+            //文件保存路径
+            string path = Server.MapPath("~/WorkSpances/SJLX/" + fileName);
+            uploadFilelx.SaveAs(path);
+            lx.UploadFilePath = path;
+            student.AddLianXi(lx);
+
+            return Content("<script>alert('上传成功！');location.href='" + Url.Action("Index") + "'</script>");
         }
 
         public ActionResult ShowChapter(int? subjectId)

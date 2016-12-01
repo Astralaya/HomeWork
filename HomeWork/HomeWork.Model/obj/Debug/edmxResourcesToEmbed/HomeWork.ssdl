@@ -53,10 +53,6 @@
       <End Role="YXZJ" EntitySet="YXZJ" />
       <End Role="Homework" EntitySet="Homework" />
     </AssociationSet>
-    <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.Store.FK_UploadFile_Student">
-      <End Role="Student" EntitySet="Student" />
-      <End Role="UploadFile" EntitySet="UploadFile" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Administrator">
     <Key>
@@ -169,7 +165,6 @@
     <Property Name="UploadFilePath" Type="nvarchar" Nullable="false" MaxLength="200" />
     <Property Name="UploadTime" Type="datetime" Nullable="false" />
     <Property Name="Describe" Type="nvarchar" Nullable="false" MaxLength="200" />
-    <Property Name="StudentNo" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="YXZJ">
     <Key>
@@ -298,18 +293,6 @@
       </Principal>
       <Dependent Role="Homework">
         <PropertyRef Name="YXZJId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UploadFile_Student">
-    <End Role="Student" Type="HomeWorkModel.Store.Student" Multiplicity="1" />
-    <End Role="UploadFile" Type="HomeWorkModel.Store.UploadFile" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Student">
-        <PropertyRef Name="StudentNo" />
-      </Principal>
-      <Dependent Role="UploadFile">
-        <PropertyRef Name="StudentNo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

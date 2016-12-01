@@ -22,13 +22,17 @@ namespace HomeWork.BLL
         {
             return student.selectSubjects();
         }
-        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId, int homeWorkTypeId)
+        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId, int? homeWorkTypeId)
         {
             return student.executeQuery(studentNo, subjectId, homeWorkTypeId);
         }
         public List<Model.Chapter> chapter(int subjectId)
         {
             return student.chapter(subjectId);
+        }
+        public bool AddLianXi(LianXi lx)
+        {
+            return student.AddLianXi(lx);
         }
     }
 }

@@ -53,10 +53,6 @@
       <End Role="YXZJ" EntitySet="YXZJs" />
       <End Role="Homework" EntitySet="Homework" />
     </AssociationSet>
-    <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.FK_UploadFile_Student">
-      <End Role="Student" EntitySet="Students" />
-      <End Role="UploadFile" EntitySet="UploadFiles" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Administrator">
     <Key>
@@ -158,7 +154,6 @@
     <Property Name="Age" Type="Int32" />
     <NavigationProperty Name="Class" Relationship="HomeWorkModel.FK__Student__ClassId__164452B1" FromRole="Student" ToRole="Class" />
     <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_Student" FromRole="Student" ToRole="Homework" />
-    <NavigationProperty Name="UploadFiles" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="Student" ToRole="UploadFile" />
   </EntityType>
   <EntityType Name="Subject">
     <Key>
@@ -188,9 +183,7 @@
     <Property Name="UploadFilePath" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
     <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Describe" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
-    <Property Name="StudentNo" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_UploadFile" FromRole="UploadFile" ToRole="Homework" />
-    <NavigationProperty Name="Student" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="UploadFile" ToRole="Student" />
   </EntityType>
   <EntityType Name="YXZJ">
     <Key>
@@ -320,18 +313,6 @@
       </Principal>
       <Dependent Role="Homework">
         <PropertyRef Name="YXZJId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_UploadFile_Student">
-    <End Role="Student" Type="HomeWorkModel.Student" Multiplicity="1" />
-    <End Role="UploadFile" Type="HomeWorkModel.UploadFile" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Student">
-        <PropertyRef Name="StudentNo" />
-      </Principal>
-      <Dependent Role="UploadFile">
-        <PropertyRef Name="StudentNo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

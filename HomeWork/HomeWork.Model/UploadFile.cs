@@ -24,9 +24,7 @@ namespace HomeWork.Model
         public string UploadFilePath { get; set; }
         public System.DateTime UploadTime { get; set; }
         public string Describe { get; set; }
-        public int StudentNo { get; set; }
     
         public virtual ICollection<Homework> Homework { get; set; }
-        public virtual Student Student { get; set; }
     }
 }

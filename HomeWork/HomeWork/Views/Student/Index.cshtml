@@ -7,10 +7,10 @@
     <span style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist" id="myTab">
-        <li style="width: 300px; text-align: center" role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab" class="glyphicon glyphicon-search">查询作业情况</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#profile" role="tab" data-toggle="tab" class="glyphicon glyphicon-file">上机练习</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#messages" role="tab" data-toggle="tab" class="glyphicon glyphicon-camera">云题库</a></li>
-        <li style="width: 300px; text-align: center" role="presentation"><a href="#settings" role="tab" data-toggle="tab" class="glyphicon glyphicon-pencil">预习总结</a></li>
+        <li style="width: 300px; text-align: center" role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab" class="glyphicon glyphicon-search"> 查询作业情况</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#profile" role="tab" data-toggle="tab" class="glyphicon glyphicon-file"> 上机练习</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#messages" role="tab" data-toggle="tab" class="glyphicon glyphicon-camera"> 云题库</a></li>
+        <li style="width: 300px; text-align: center" role="presentation"><a href="#settings" role="tab" data-toggle="tab" class="glyphicon glyphicon-pencil"> 预习总结</a></li>
     </ul>
 
 </div>
@@ -18,7 +18,7 @@
 <div class="tab-content">
     <!-----------------------------查询作业 #begin----------------------------->
     <div role="tabpanel" class="tab-pane active" id="home">
-        <div style="float: left; width: 350px; height: 650px; border-right: solid 1px; text-align: center">
+        <div style="float: left; width: 350px; text-align: center">
             <form action="@Url.Action("ChaXun", "Student")"  method="post" target="id_iframe" >
                 <h1 style="font-size: 30px">查询作业</h1>
                 <div style="height: 30px"></div>
@@ -26,7 +26,7 @@
                 @Html.DropDownList("HomeworkTypeId", (SelectList)ViewBag.typelist, "请选择", new { id = "type", Class = "form-control" })
                 <div style="height: 30px"></div>
                 <h3>选择书本:</h3>
-                @Html.DropDownList("SubjectId", (SelectList)ViewBag.list, "请选择", new { id = "subject", Class = "form-control" })
+                @Html.DropDownList("Subject", (SelectList)ViewBag.list, "请选择", new { id = "subject", Class = "form-control" })
                 <div style="height: 30px"></div>
                 <div style="text-align: center; width: 48px">
                 </div>
@@ -36,7 +36,7 @@
         <div style="text-align: center">
             <div style="height: 100px"></div>
             <div class="a">
-                <iframe id="id_iframe" name="id_iframe" style="width: 800px; height: 400px; border: 0px"></iframe>
+                <iframe id="id_iframe" name="id_iframe" style="width: 60%; height: 100%; border: 0px"></iframe>
             </div>
         </div>
     </div>
@@ -46,14 +46,14 @@
         <div style="float: left; width: 50px; height: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div style="height: 100px">学员作业登记系统>上机练习>上传作业</div>
         <div style="float: left; width: 100px">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <div style="width: 800px; height: 200px;">
-            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        <div style="width: 800px; height: 400px;">
+            @using (Html.BeginForm("LianXi", "Student", FormMethod.Post, new { enctype = "multipart/form-data",id="LianXi" }))
             {
                 <table>
                     <tr style="height: 50px">
                         <td>书本选择: </td>
                         <td>
-                            @Html.DropDownList("SubjectId", (SelectList)ViewBag.list, "请选择", new { id = "subject1", Class = "form-control" })
+                            @Html.DropDownList("SubjectIdlx", (SelectList)ViewBag.list, "请选择", new { id = "subject1", Class = "form-control"})
                         </td>
                     </tr>
                     <tr style="height: 50px">
@@ -65,39 +65,38 @@
                     <tr style="height: 50px">
                         <td>选择文件(10M以内): </td>
                         <td>
-                            <input type="file" name="file" class="form-control" />
+                            <input type="file" name="uploadFilelx" class="form-control" id="file"/>
                         </td>
-                    </tr>
-                    <tr style="height: 50px">
-                        <td>作业名称: </td>
-                        <td>
-                            <input type="text" name="name" class="form-control" /></td>
                     </tr>
                     <tr style="height: 50px">
                         <td>完成度: </td>
                         <td>
-                            <input type="text" name="name" class="form-control" /></td>
+                            <input type="text" name="Speedlx" class="form-control" />
+
+                        </td>
                     </tr>
                     <tr style="height: 50px">
-                        <td>描述: </td>
+                        <td>描述(100字以内): </td>
                         <td>
-                            <input type="text" name="name" class="form-control" /></td>
+                            <textarea type="text" name="Describelx" class="form-control" ></textarea>
+
+                        </td>
                     </tr>
                     <tr style="height: 80px">
                         <td colspan="2" style="text-align: center;">
-                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px" />
+                            <input type="submit" value="提 交" class="btn btn-primary btn-lg" style="width: 400px"/>
                         </td>
                     </tr>
                 </table>
             }
         </div>
-        <div style="height: 200px"></div>
-        <div style="float: left; width: 400px;">
-            <span class="glyphicon glyphicon-asterisk">上传须知:</span>
+        <div  style="width: 800px;padding-left:100px">
+            <span class="glyphicon glyphicon-asterisk"> 上传须知:</span>
+            <br />
             <ul style="list-style: none">
-                <li><span class="glyphicon glyphicon-chevron-right">请勿上传小说、mp3、视频等与技术无关的内容!</span></li>
-                <li><span class="glyphicon glyphicon-chevron-right">如有雷同，抄袭等情况，一旦发现将被删除!</span></li>
-                <li><span class="glyphicon glyphicon-chevron-right">如有作业不能正确提交的情况请与管理员联系</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 请勿上传小说、mp3、视频等与技术无关的内容!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有雷同，抄袭等情况，一旦发现将被删除!</span></li>
+                <li><span class="glyphicon glyphicon-chevron-right"> 如有作业不能正确提交的情况请与管理员联系</span></li>
 
             </ul>
         </div>
@@ -214,7 +213,7 @@
                     </tr>
                     <tr style="height: 80px">
                         <td colspan="2" style="text-align: center;">
-                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px" />
+                            <input type="submit" value="提交" class="btn btn-primary btn-lg" style="width: 400px"/>
                         </td>
                     </tr>
                 </table>
@@ -248,6 +247,25 @@
     });
 
 </script>
+<!----------------判断文件上传类型 #begin------------------>
+<script>
+    $("#LianXi").submit(function () {
+       
+        var obj = $("#file").val();
+        
+        if (obj == "") {
+            alert("请选择要上传的文件!");
+            return false;
+        }
+        var stuff = obj.match(/^(.*)(\.)(.{1,8})$/)[3];
+        if (stuff != "zip") {
+            alert("文件类型不正确，请选择.zip文件!");
+            return false;
+        }
+        return true;
+    });
+</script>
+<!----------------判断文件上传类型 #end------------------>
 <!-------------上机练习选择书本下拉框联动 #begin-->
 <script type="text/javascript">
     $.ajaxSetup({ cache: false });

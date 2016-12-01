@@ -1,10 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/font.css" rel="stylesheet" />
     <script src="~/js/jquery.min.js"></script>
     <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
     <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
@@ -36,8 +35,12 @@
     <br />
     @RenderBody()
 
+    @Html.Partial("End");
+
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="~/css/font.css" rel="stylesheet" />
+
     @RenderSection("scripts", required: false)
     <script>
         $.ajaxSetup({ cache: false });

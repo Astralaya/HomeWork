@@ -13,7 +13,6 @@ D:\桌面\HomeWork\HomeWork\HomeWork.Model\bin\Debug\HomeWork.Model.pdb
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\bin\Debug\EntityFramework.dll
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\bin\Debug\EntityFramework.xml
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\桌面\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWorkModel.csprojResolveAssemblyReference.cache
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.dll
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.pdb
 D:\试机\HomeWork\HomeWork\HomeWork.Model\bin\Debug\HomeWork.Model.dll.config

@@ -2,10 +2,8 @@
 @{
     Layout = null;
 }
-
-<!DOCTYPE html>
-
-<html class="rgba borderradius">
+<!DOCTYPE  HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" class="rgba borderradius">
 <head>
     <title>登录 - 作业登记系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,15 +19,15 @@
 </head>
 <body>
     <div id="stage">
-        <div id="guide" class="simple float" style="height:110px">
+        <div id="guide" class="simple float" style="height: 110px">
             <h1 style="font-weight: bolder">
-                <img src="~/image/Log.png" style="padding:0px"/>
+                <img src="~/image/Log.png" style="padding: 0px" />
             </h1>
         </div>
         <div id="mainer" style="min-height: 298px;">
             <div id="area-login">
                 @*轮播图片*@
-                <div class="block l">
+                <div class="block l" style="padding-left: 40px">
                     <div id="myCarousel" class="carousel slide">
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,31 +59,40 @@
                             <div style="padding: 3px 2px; border-bottom: 1px solid #ccc">
                                 <h2 id="jiaCu">登&nbsp;&nbsp;录</h2>
                             </div>
-                            <form id="ff" method="post" action="@Url.Action("Login","Account")">
-                                <div>
-                                    <div class="area">
+                            <form id="ff" method="post" action="@Url.Action("Login", "Account")">
+                                <div class="area">
+                                    <div class="input-group">
                                         <i class="inp-icon icon icon-user"></i>
-                                            @Html.TextBoxFor(m => m.UserName, new {placeholder="请输入账号" })
+                                        <span class="glyphicon glyphicon-user input-group-addon"></span>
+                                        @Html.TextBoxFor(m => m.UserName, new { placeholder = "请输入账号", Class = "form-control " })
+                                    </div>
+                                    <span class="clearfix"></span>
+                                    <div class="err">@Html.ValidationMessageFor(m => m.UserName)</div>
+                                </div>
+                                <div>
+                                    <div class="area">
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                                            <i class="inp-icon icon icon-lock"></i>
+                                            @Html.PasswordFor(m => m.Password, new { placeholder = "请输入密码" })
+                                        </div>
+
                                         <span class="clearfix"></span>
-                                        <div class="err">@Html.ValidationMessageFor(m=>m.UserName)</div>
+                                        <div class="err">@Html.ValidationMessageFor(m => m.Password)</div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="area">
+                                        <div class="input-group">
+                                            <span class="input-group-addon glyphicon glyphicon-registration-mark"></span>
+                                            <i class="inp-icon icon icon-lock"></i>
+                                             @Html.TextBoxFor(m => m.IdentityCode, new { placeholder = "请输入验证码" })
+                                        </div>
                                         <i class="inp-icon icon icon-lock"></i>
-                                        @Html.TextBoxFor(m => m.Password, new {placeholder="请输入密码" })
                                         <span class="clearfix"></span>
-                                         <div class="err">@Html.ValidationMessageFor(m=>m.Password)</div>
+                                        <div class="err">@Html.ValidationMessageFor(m => m.IdentityCode)</div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="area">
-                                        <i class="inp-icon icon icon-lock"></i>
-                                        @Html.TextBoxFor(m => m.IdentityCode, new {placeholder="请输入验证" })
-                                        <span class="clearfix"></span>
-                                         <div class="err">@Html.ValidationMessageFor(m=>m.IdentityCode)</div>
-                                    </div>
-                                    <div style="height:60px">
+                                    <div style="height: 60px">
                                         <img  onclick="this.src=this.src+'?'" src="@Url.Action("SecurityCode")" width="119" height="33" style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;<label>点击图片更换验证码</label>
                                     </div>
                                 </div>
@@ -118,7 +125,6 @@
         </div>
     </div>
     <div class="err">@Html.ValidationSummary()</div>
-    <span class="clearfix" style="text-align: center">&copy;青鸟出品</span><br />
-    <a class="clearfix" style="text-align: center">使用前必读</a>
+    @Html.Partial("End")
 </body>
 </html>

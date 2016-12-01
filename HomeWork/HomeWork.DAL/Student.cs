@@ -41,7 +41,7 @@ namespace HomeWork.DAL
         /// <param name="studentNo"></param>
         /// <param name="chapterId"></param>
         /// <returns></returns>
-        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId,int homeWorkTypeId)
+        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId, int? homeWorkTypeId)
         {
             if (subjectId == null)
             {
@@ -77,7 +77,7 @@ namespace HomeWork.DAL
                                };
                 return homework.ToList();
             }
-            
+
         }
         /// <summary>
         /// 查询章节
@@ -86,7 +86,44 @@ namespace HomeWork.DAL
         /// <returns></returns>
         public List<Model.Chapter> chapter(int subjectId)
         {
-            return context.Chapters.Where(m => m.SubjectId == subjectId).Select(m=>m).ToList();
+            return context.Chapters.Where(m => m.SubjectId == subjectId).Select(m => m).ToList();
+        }
+        /// <summary>
+        /// 添加学生作业
+        /// </summary>
+        /// <param name="lx"></param>
+        /// <returns></returns>
+        public bool AddLianXi(LianXi lx)
+        {
+            //插入文件信息
+            var file = new UploadFile()
+            {
+                UploadTime = DateTime.Now,
+                UploadFileName = lx.UploadFileNamelx,
+                Describe = lx.Describelx,
+                UploadFilePath = lx.UploadFilePath
+            };
+            context.UploadFiles.Add(file);
+            //如果插入文件成功则继续插入作业信息
+            if (context.SaveChanges() > 0)
+            {
+                var uploadFileId = Convert.ToInt32((context.UploadFiles.Where(s => s.UploadFilePath == lx.UploadFilePath).Select(m => m.UploadFileId).ToList())[0]);
+                //int uploadFileId = Convert.ToInt32();
+                var lianXi = new Homework()
+                {
+                    StudentNo = lx.StudentNo,
+                    ChapterId = lx.ChapterIdlx,
+                    HomeworkTypeId = 2,
+                    Speed = lx.Speedlx,
+                    UploadFileId = uploadFileId
+                };
+                context.Homework.Add(lianXi);
+                if (context.SaveChanges() > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

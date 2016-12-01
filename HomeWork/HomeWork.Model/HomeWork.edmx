@@ -58,10 +58,6 @@
             <End Role="YXZJ" EntitySet="YXZJ" />
             <End Role="Homework" EntitySet="Homework" />
           </AssociationSet>
-          <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.Store.FK_UploadFile_Student">
-            <End Role="Student" EntitySet="Student" />
-            <End Role="UploadFile" EntitySet="UploadFile" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Administrator">
           <Key>
@@ -174,7 +170,6 @@
           <Property Name="UploadFilePath" Type="nvarchar" Nullable="false" MaxLength="200" />
           <Property Name="UploadTime" Type="datetime" Nullable="false" />
           <Property Name="Describe" Type="nvarchar" Nullable="false" MaxLength="200" />
-          <Property Name="StudentNo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="YXZJ">
           <Key>
@@ -306,18 +301,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_UploadFile_Student">
-          <End Role="Student" Type="HomeWorkModel.Store.Student" Multiplicity="1" />
-          <End Role="UploadFile" Type="HomeWorkModel.Store.UploadFile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Student">
-              <PropertyRef Name="StudentNo" />
-            </Principal>
-            <Dependent Role="UploadFile">
-              <PropertyRef Name="StudentNo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
@@ -375,10 +358,6 @@
           <AssociationSet Name="FK_Homework_YXZJ" Association="HomeWorkModel.FK_Homework_YXZJ">
             <End Role="YXZJ" EntitySet="YXZJs" />
             <End Role="Homework" EntitySet="Homework" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UploadFile_Student" Association="HomeWorkModel.FK_UploadFile_Student">
-            <End Role="Student" EntitySet="Students" />
-            <End Role="UploadFile" EntitySet="UploadFiles" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Administrator">
@@ -481,7 +460,6 @@
           <Property Name="Age" Type="Int32" />
           <NavigationProperty Name="Class" Relationship="HomeWorkModel.FK__Student__ClassId__164452B1" FromRole="Student" ToRole="Class" />
           <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_Student" FromRole="Student" ToRole="Homework" />
-          <NavigationProperty Name="UploadFiles" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="Student" ToRole="UploadFile" />
         </EntityType>
         <EntityType Name="Subject">
           <Key>
@@ -511,9 +489,7 @@
           <Property Name="UploadFilePath" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
           <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Describe" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
-          <Property Name="StudentNo" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Homework" Relationship="HomeWorkModel.FK_Homework_UploadFile" FromRole="UploadFile" ToRole="Homework" />
-          <NavigationProperty Name="Student" Relationship="HomeWorkModel.FK_UploadFile_Student" FromRole="UploadFile" ToRole="Student" />
         </EntityType>
         <EntityType Name="YXZJ">
           <Key>
@@ -646,18 +622,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_UploadFile_Student">
-          <End Role="Student" Type="HomeWorkModel.Student" Multiplicity="1" />
-          <End Role="UploadFile" Type="HomeWorkModel.UploadFile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Student">
-              <PropertyRef Name="StudentNo" />
-            </Principal>
-            <Dependent Role="UploadFile">
-              <PropertyRef Name="StudentNo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -784,7 +748,6 @@
                 <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
                 <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
                 <ScalarProperty Name="Describe" ColumnName="Describe" />
-                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

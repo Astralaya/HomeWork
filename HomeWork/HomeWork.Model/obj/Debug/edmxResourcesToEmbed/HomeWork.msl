@@ -121,7 +121,6 @@
           <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
           <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
           <ScalarProperty Name="Describe" ColumnName="Describe" />
-          <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
