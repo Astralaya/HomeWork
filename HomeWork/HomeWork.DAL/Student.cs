@@ -41,22 +41,52 @@ namespace HomeWork.DAL
         /// <param name="studentNo"></param>
         /// <param name="chapterId"></param>
         /// <returns></returns>
-        public List<QueryHomeWork> selectYuxi(int studentNo, int subjectId)
+        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId,int homeWorkTypeId)
         {
-            var homework = from u in context.Homework
-                           where u.StudentNo == studentNo && u.Chapter.Subject.SubjectId == subjectId
-                           select new QueryHomeWork()
-                           {
-                               Comment = u.Comment,
-                               ScoreName = u.Score.ScoreName,
-                               Speed = u.Speed,
-                               StudentName = u.Student.StudentName,
-                               UploadFileName = u.UploadFile.UploadFileName,
-                               Describe = u.UploadFile.Describe,
-                               UploadFilePath = u.UploadFile.UploadFilePath,
-                               UploadTime = u.UploadFile.UploadTime
-                           };
-            return homework.ToList();
+            if (subjectId == null)
+            {
+                var homework = from u in context.Homework
+                               where u.StudentNo == studentNo && u.HomeworkTypeId == homeWorkTypeId
+                               select new QueryHomeWork()
+                               {
+                                   Comment = u.Comment,
+                                   ScoreName = u.Score.ScoreName,
+                                   Speed = u.Speed,
+                                   StudentName = u.Student.StudentName,
+                                   UploadFileName = u.UploadFile.UploadFileName,
+                                   Describe = u.UploadFile.Describe,
+                                   UploadFilePath = u.UploadFile.UploadFilePath,
+                                   UploadTime = u.UploadFile.UploadTime
+                               };
+                return homework.ToList();
+            }
+            else
+            {
+                var homework = from u in context.Homework
+                               where u.StudentNo == studentNo && u.Chapter.Subject.SubjectId == subjectId && u.HomeworkTypeId == homeWorkTypeId
+                               select new QueryHomeWork()
+                               {
+                                   Comment = u.Comment,
+                                   ScoreName = u.Score.ScoreName,
+                                   Speed = u.Speed,
+                                   StudentName = u.Student.StudentName,
+                                   UploadFileName = u.UploadFile.UploadFileName,
+                                   Describe = u.UploadFile.Describe,
+                                   UploadFilePath = u.UploadFile.UploadFilePath,
+                                   UploadTime = u.UploadFile.UploadTime
+                               };
+                return homework.ToList();
+            }
+            
+        }
+        /// <summary>
+        /// 查询章节
+        /// </summary>
+        /// <param name="subjectId"></param>
+        /// <returns></returns>
+        public List<Model.Chapter> chapter(int subjectId)
+        {
+            return context.Chapters.Where(m => m.SubjectId == subjectId).Select(m=>m).ToList();
         }
     }
 }

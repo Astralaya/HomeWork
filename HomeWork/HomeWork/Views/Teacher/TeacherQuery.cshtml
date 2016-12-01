@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "TeacherQuery";
+}
+@model IEnumerable<HomeWork.Model.TeacherQuery>
+@using HomeWork.Model
+<h3>查询结果</h3>
+
+
+
+@if (Model != null)
+{
+    
+    <table class="table">
+            
+            <thead>
+                <tr>
+                    <th>章节</th>
+                    <th>学生姓名</th>
+                    <th>完成度</th>
+                    <th>评价</th>
+                    <th>评分</th>
+                    <th>文件路径</th>
+                    <th>上传时间</th>
+                    <th>文件描述</th>
+
+                </tr>
+            </thead>
+
+        @foreach (HomeWork.Model.TeacherQuery m in Model)
+        {
+            
+            <tbody>
+                <tr class="danger">
+                    <td>@m.ChapterName</td>
+                    <td>@m.StudentName</td>
+                    <td>@m.Speed</td>
+                    <td>@m.Comment</td>
+                    <td>@m.ScoreName</td>
+                    <td>@m.UploadFilePath</td>
+                    <td>@m.UploadTime</td>
+                    <td>@m.Describe</td>
+                </tr>
+
+            </tbody>
+        
+    
+        }
+    </table>
+}
+
+
+
+
+

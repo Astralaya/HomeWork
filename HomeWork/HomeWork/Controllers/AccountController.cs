@@ -63,14 +63,18 @@ namespace HomeWork.Controllers
 
 
             }
-            return View(lu);
+            return View("Login");
         }
 
         private void error(dynamic user)
         {
             ModelState.AddModelError("", "用户名或密码不正确！！");
         }
-
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Account");
+        }
 
 
         /// <summary>

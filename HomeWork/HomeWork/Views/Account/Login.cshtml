@@ -65,21 +65,24 @@
                                 <div>
                                     <div class="area">
                                         <i class="inp-icon icon icon-user"></i>
-                                        <input  name="UserName" type="text" placeholder="请输入账号"><span class="clearfix"></span>
+                                            @Html.TextBoxFor(m => m.UserName, new {placeholder="请输入账号" })
+                                        <span class="clearfix"></span>
                                         <div class="err">@Html.ValidationMessageFor(m=>m.UserName)</div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="area">
                                         <i class="inp-icon icon icon-lock"></i>
-                                        <input name="PassWord" type="password" placeholder="请输入密码"><span class="clearfix"></span>
+                                        @Html.TextBoxFor(m => m.Password, new {placeholder="请输入密码" })
+                                        <span class="clearfix"></span>
                                          <div class="err">@Html.ValidationMessageFor(m=>m.Password)</div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="area">
                                         <i class="inp-icon icon icon-lock"></i>
-                                        <input name="identityCode" type="text" placeholder="验证码"><span class="clearfix"></span>
+                                        @Html.TextBoxFor(m => m.IdentityCode, new {placeholder="请输入验证" })
+                                        <span class="clearfix"></span>
                                          <div class="err">@Html.ValidationMessageFor(m=>m.IdentityCode)</div>
                                     </div>
                                     <div style="height:60px">

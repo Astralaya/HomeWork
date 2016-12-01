@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="608f327569d040b7ae98b45a15325e33" Name="关系图1">
-        <EntityTypeShape EntityType="HomeWorkModel.Administrator" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+      <Diagram DiagramId="245166aa22544226a714b72ee3008deb" Name="关系图1">
+        <EntityTypeShape EntityType="HomeWorkModel.Administrator" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Chapter" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Class" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Grade" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
@@ -13,10 +13,10 @@
         <EntityTypeShape EntityType="HomeWorkModel.HomeworkType" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Score" Width="1.5" PointX="7.5" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Student" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="HomeWorkModel.Subject" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeWorkModel.Subject" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Teacher" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HomeWorkModel.UploadFile" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HomeWorkModel.YXZJ" Width="1.5" PointX="7.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeWorkModel.UploadFile" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HomeWorkModel.YXZJ" Width="1.5" PointX="7.5" PointY="15.125" IsExpanded="true" />
         <AssociationConnector Association="HomeWorkModel.FK_Chapter_Subject" ManuallyRouted="false" />
         <AssociationConnector Association="HomeWorkModel.FK_Homework_Chapter" ManuallyRouted="false" />
         <AssociationConnector Association="HomeWorkModel.FK__Class__GradeId__1DE57479" ManuallyRouted="false" />

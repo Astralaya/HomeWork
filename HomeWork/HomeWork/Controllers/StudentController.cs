@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace HomeWork.Controllers
 {
+    [Authorize]
     public class StudentController : Controller
     {
         BLL.Student student = new BLL.Student();
@@ -23,34 +24,25 @@ namespace HomeWork.Controllers
             List<Subject> subjects = student.selectSubjects();
             SelectList list = new SelectList(subjects, "SubjectId", "SubjectName");
             ViewBag.list = list;
+
             return View();
         }
         public ActionResult List()
         {
             return PartialView("List");
         }
-        public ActionResult ChaXun(int HomeworkTypeId, int subjectId)
+        /// <summary>
+        /// 查询作业
+        /// </summary>
+        /// <param name="HomeworkTypeId"></param>
+        /// <param name="subjectId"></param>
+        /// <returns></returns>
+        public ActionResult ChaXun(int HomeworkTypeId, int? subjectId)
         {
             int studentNo = Convert.ToInt32(this.User.Identity.Name);
-            //预习总结
-            if (HomeworkTypeId == 1)
-            {
-                List<QueryHomeWork> list = student.selectYuxi(studentNo, subjectId);
-                ViewBag.yuxi = list;
-                return PartialView("WorkList");
-            }
-            //上机练习
-            if (HomeworkTypeId == 2)
-            {
-                return PartialView("WorkList");
-            }
-            //云题库
-            if (HomeworkTypeId == 3)
-            {
-                return PartialView("WorkList");
-            }
-
-            return PartialView("error");
+            List<QueryHomeWork> list = student.executeQuery(studentNo, subjectId, HomeworkTypeId);
+            ViewBag.yuxi = list;
+            return PartialView("WorkList");
         }
         public ActionResult Yuxi()
         {
@@ -65,6 +57,15 @@ namespace HomeWork.Controllers
         public ActionResult Lianxi()
         {
             return PartialView("Lianxi");
+        }
+
+        public ActionResult ShowChapter(int? subjectId)
+        {
+            int subjectIds = subjectId.HasValue ? Convert.ToInt32(subjectId) : 22;
+            //章节下拉框
+            List<Chapter> chapters = student.chapter(subjectIds);
+            ViewBag.chapter = chapters;
+            return PartialView("ShowChapter");
         }
     }
 }

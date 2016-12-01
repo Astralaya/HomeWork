@@ -22,9 +22,13 @@ namespace HomeWork.BLL
         {
             return student.selectSubjects();
         }
-        public List<QueryHomeWork> selectYuxi(int studentNo, int subjectId)
+        public List<QueryHomeWork> executeQuery(int studentNo, int? subjectId, int homeWorkTypeId)
         {
-            return student.selectYuxi(studentNo, subjectId);
+            return student.executeQuery(studentNo, subjectId, homeWorkTypeId);
+        }
+        public List<Model.Chapter> chapter(int subjectId)
+        {
+            return student.chapter(subjectId);
         }
     }
 }

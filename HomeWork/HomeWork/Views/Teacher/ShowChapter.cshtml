@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "ShowChapter";
+}
+@{SelectList list = new SelectList(ViewBag.chapter, "ChapterId", "ChapterName");}
+请选择章节：@Html.DropDownList("chapter", list,"全部", new {id="chapterId" })

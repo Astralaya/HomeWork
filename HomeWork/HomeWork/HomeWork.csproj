@@ -601,7 +601,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Teacher\Index.cshtml" />
     <Content Include="Views\Student\List.cshtml" />
     <Content Include="Views\Student\Lianxi.cshtml" />
     <Content Include="Views\Student\Yuntiku.cshtml" />
@@ -610,6 +609,10 @@
     <Content Include="uploader-master\demos\upload.php" />
     <Content Include="uploader-master\dmuploader.jquery.json" />
     <Content Include="uploader-master\README.md" />
+    <Content Include="Views\Student\ShowChapter.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Teacher\ShowChapter.cshtml" />
+    <Content Include="Views\Teacher\TeacherQuery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -642,9 +645,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>46674</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:13640/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

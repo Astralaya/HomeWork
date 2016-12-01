@@ -95,6 +95,7 @@
     <Compile Include="Teacher.cs">
       <DependentUpon>HomeWork.tt</DependentUpon>
     </Compile>
+    <Compile Include="TeacherQuery.cs" />
     <Compile Include="UploadFile.cs">
       <DependentUpon>HomeWork.tt</DependentUpon>
     </Compile>

@@ -103,7 +103,7 @@
           </Key>
           <Property Name="HomeworkId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="StudentNo" Type="int" Nullable="false" />
-          <Property Name="ChapterId" Type="int" Nullable="false" />
+          <Property Name="ChapterId" Type="int" />
           <Property Name="HomeworkTypeId" Type="int" Nullable="false" />
           <Property Name="ScoreId" Type="int" />
           <Property Name="Comment" Type="nvarchar" MaxLength="50" />
@@ -235,7 +235,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Chapter">
-          <End Role="Chapter" Type="HomeWorkModel.Store.Chapter" Multiplicity="1" />
+          <End Role="Chapter" Type="HomeWorkModel.Store.Chapter" Multiplicity="0..1" />
           <End Role="Homework" Type="HomeWorkModel.Store.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Chapter">
@@ -427,7 +427,7 @@
           </Key>
           <Property Name="HomeworkId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="StudentNo" Type="Int32" Nullable="false" />
-          <Property Name="ChapterId" Type="Int32" Nullable="false" />
+          <Property Name="ChapterId" Type="Int32" />
           <Property Name="HomeworkTypeId" Type="Int32" Nullable="false" />
           <Property Name="ScoreId" Type="Int32" />
           <Property Name="Comment" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -539,7 +539,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Homework_Chapter">
-          <End Role="Chapter" Type="HomeWorkModel.Chapter" Multiplicity="1" />
+          <End Role="Chapter" Type="HomeWorkModel.Chapter" Multiplicity="0..1" />
           <End Role="Homework" Type="HomeWorkModel.Homework" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Chapter">

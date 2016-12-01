@@ -16,7 +16,7 @@ namespace HomeWork.Model
     {
         public int HomeworkId { get; set; }
         public int StudentNo { get; set; }
-        public int ChapterId { get; set; }
+        public Nullable<int> ChapterId { get; set; }
         public int HomeworkTypeId { get; set; }
         public Nullable<int> ScoreId { get; set; }
         public string Comment { get; set; }
