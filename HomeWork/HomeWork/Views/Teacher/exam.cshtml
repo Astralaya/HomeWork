@@ -1,0 +1,152 @@
+﻿@model List<HomeWork.Model.TeacherQuery>
+
+<link href="~/nanoGALLERY-master/css/nanogallery.css" rel="stylesheet" />
+<script src="~/nanoGALLERY-master/jquery.nanogallery.js"></script>
+<link href="~/nanoGALLERY-master/css/themes/light/nanogallery_light.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        //var myColorScheme = {
+        //    navigationbar: {
+        //        background: '#000',
+        //        border: '0px dotted #555',
+        //        color: '#ccc',
+        //        colorHover: '#fff'
+        //    },
+        //    thumbnail: {
+        //        background: '#000',
+        //        border: '1px solid #000',
+        //        labelBackground: 'transparent',
+        //        labelOpacity: '0.8',
+        //        titleColor: '#fff',
+        //        descriptionColor: '#eee'
+        //    }
+        //};
+
+        $(".nanoGallery").nanoGallery({
+
+
+ 
+            thumbnailWidth: 200, thumbnailHeight: 200,
+            items: [
+                @for (int i = 0; i < Model.Count(); i++)
+                { 
+                 
+
+             <text> {
+               
+                    src:'@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString() ',
+                    srct: '@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString()',
+                    title: '@Model[i].StudentName',
+                    </text>   
+                    if (i == 0)
+                    {
+                    <text>
+                    ID:  @Model[i].StudentNo,
+                    kind: 'album'
+                   
+                },
+                {
+                    src:'@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString() ',
+                    srct: '@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString()',
+                    title: '@Model[i].StudentName',
+                    ID:  parseInt( @Model[i].UploadFileId ),
+                    kind:'image',
+                    albumID:@Model[i].StudentNo
+                    },
+
+                        </text>  
+                    }
+                    else
+                    {
+                        if (Model[i].StudentNo == Model[i - 1].StudentNo)//和上一张照片的学生ID比较
+                        {
+                            <text>
+                             ID:  parseInt( @Model[i].UploadFileId ),
+                             kind:'image',
+                            albumID:@Model[i].StudentNo
+    },
+                             </text> 
+                        }
+                        else
+                        {
+                             <text>
+                         ID: @Model[i].StudentNo,
+                         kind:'album',
+                               
+                           },
+                          {
+                            src:'@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString() ',
+                            srct: '@Url.Content(Model[i].UploadFilePath + "/" + Model[i].UploadFileName).ToString()',
+                            title: '@Model[i].StudentName',
+                               ID:  parseInt( @Model[i].UploadFileId ),
+                               kind:'image',
+                               albumID:@Model[i].StudentNo
+                    },
+                              </text> 
+                        }
+
+
+                    }
+
+                }
+                     
+                
+                
+    ],
+       
+    thumbnailHoverEffect: 'imageScaleIn80',
+        thumbnailAlignment: 'left',
+
+    colorScheme: 'light',
+    colorSchemeViewer: 'light',
+    //galleryToolbarHideIcons: true，
+    i18n : {
+        'breadcrumbHome' : '云题库'}
+
+
+
+    });
+    });
+
+
+</script>
+
+<h3>查询结果</h3>
+
+<div class="nanoGallery">
+
+    @*    <a href="@Url.Content("/WorkSpances/YTK/1 (1).jpg")"
+        data-ngkind="album"
+	    data-ngThumb="@Url.Content("/WorkSpances/YTK/1 (1).jpg")"
+        
+        data-ngid="111"
+	  >第一个</a>
+
+     <a href="@Url.Content("/WorkSpances/YTK/1 (5).png")"
+        data-ngkind="image"
+	    data-ngThumb="@Url.Content("/WorkSpances/YTK/1 (5).png")"
+          data-ngalbumid="111"
+        data-ngid="2"  
+	  >第一个</a>
+
+     <a href="@Url.Content("/WorkSpances/YTK/1 (6).png")"
+        data-ngkind="image"
+         data-ngalbumid="111"
+	    data-ngThumb="@Url.Content("/WorkSpances/YTK/1 (6).png")"
+        data-ngid="3"
+	  >第一个</a>
+    
+    <a href="@Url.Content("/WorkSpances/YTK/1 (1).jpg")"
+        data-ngkind="album"
+	    data-ngThumb="@Url.Content("/WorkSpances/YTK/1 (1).jpg")"
+        data-ngid="66"
+	  >第二个</a>*@
+
+</div>
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ using HomeWork.BLL;
 
 namespace HomeWork.Controllers
 {
-     [Authorize]
+     //[Authorize]
     public class TeacherController : Controller
     {
         //
@@ -96,6 +96,28 @@ namespace HomeWork.Controllers
 
         }
 
+        public ActionResult exam(string ClassId)
+        {
+
+            var list =from item in context.Homework.Where(p=>(p.HomeworkTypeId==3))
+                      select new TeacherQuery()
+                      {
+                          StudentName = item.Student.StudentName,
+                          Speed = item.Speed,
+                          Comment = item.Comment,
+                          ScoreName = item.Score.ScoreName,
+                          UploadFilePath = item.UploadFile.UploadFilePath,
+                          UploadTime = item.UploadFile.UploadTime,
+                          Describe = item.UploadFile.Describe,
+                          UploadFileName = item.UploadFile.UploadFileName,
+                          ChapterName = item.Chapter.ChapterName,
+                          UploadFileId=item.UploadFileId,
+                          StudentNo=item.StudentNo
+                      };
+            IEnumerable<TeacherQuery> items = list.ToList();
+            
+            return PartialView("exam", items);
+        }
 
     }
 }

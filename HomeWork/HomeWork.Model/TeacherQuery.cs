@@ -17,5 +17,7 @@ namespace HomeWork.Model
         public string Describe { get; set; }     //文件描述
         public string UploadFileName { get; set; }   //文件名
         public string ChapterName { get; set; }//章节
+        public int UploadFileId { get; set; }//上传文件ID
+        public int StudentNo { get; set; }//学生编号
     }
 }
