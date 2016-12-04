@@ -35,6 +35,13 @@
             }
         });
     }
+
+    //function clean() {
+    //    $(this).click(function () { $("#result").html(""); })
+
+
+    //}
+
 </script>
 
 
@@ -57,40 +64,57 @@
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="home">
             <p>上机练习</p>
-           @using (Ajax.BeginForm("TeacherQuery", "Teacher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace }))
-           {
+            @using (Ajax.BeginForm("TeacherQuery", "Teacher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "result1", InsertionMode = InsertionMode.Replace }))
+            {
                 <input type="hidden" value="2" name="type" />
              
-                <p style="display: inline">请选择班级：</p>@Html.DropDownList("ClassId", (SelectList)ViewBag.list2, new { id = "class" })
-                 <p style="display: inline">请选择科目：</p>@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, new { id = "subject" })
+                <p style="display: inline">请选择班级：</p>@Html.DropDownList("ClassId", (SelectList)ViewBag.list2, new { id = "class", })
+                <p style="display: inline">请选择科目：</p>@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, new { id = "subject", })
                 <div class="chapter" style="display: inline">@Html.Action("ShowChapter")</div>
                 <input type="submit" value="查询" />
-           }
-
+            }
+            <div id="result1">@Html.Action("TeacherQuery")</div>
         </div>
-        <div class="tab-pane fade" id="ios">
+        <div class="tab-pane fade" id="ios" >
             <p>
-                <input type="hidden" value="3" name="type"/>
+                <input type="hidden" value="3" name="type" />
+                
                 云题库
             </p>
-            请选择做题时间
+            @using (Ajax.BeginForm("exam", "Teacher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "result2", InsertionMode = InsertionMode.Replace }))
+            {
+             
+                <lable>请选择班级：</lable>@Html.DropDownList("ClassId", (SelectList)ViewBag.list2, new { id = "class", })
+                <lable>请选择上传时间</lable> <select>
+                    <option value="1">最近一周</option>
+                    <option value="2">最近三周</option>
+                    <option value="3">最近一个月</option>
+
+                    <input type="submit" value="查询" />
+
+                </select>
+                 <div id="result2">@Html.Action("TeacherQuery")</div>
+                 
+            }
+
         </div>
         <div class="tab-pane fade" id="jmeter">
             <p>总结预习</p>
-            @using (Ajax.BeginForm("TeacherQuery", "Teacher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace }))
-           {
+            @using (Ajax.BeginForm("TeacherQuery", "Teacher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "result3", InsertionMode = InsertionMode.Replace }))
+            {
                 <input type="hidden" value="1" name="type" />
              
                 <p style="display: inline">请选择班级：</p>@Html.DropDownList("ClassId", (SelectList)ViewBag.list2, new { id = "class" })
-                 <p style="display: inline">请选择科目：</p>@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, new { id = "subject" })
+                <p style="display: inline">请选择科目：</p>@Html.DropDownList("SubjectId", (SelectList)ViewBag.list, new { id = "subject" })
                 <div class="chapter" style="display: inline">@Html.Action("ShowChapter")</div>
                 <input type="submit" value="查询" />
-           }
+            }
 
+            <div id="result3">@Html.Action("TeacherQuery")</div>
 
         </div>
 
     </div>
 
 </div>
-<div id="result">@Html.Action("TeacherQuery")</div>
+

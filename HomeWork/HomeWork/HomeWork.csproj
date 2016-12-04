@@ -548,6 +548,39 @@
     <Content Include="bootstrap-3.3.0\test-infra\uncached-npm-install.sh" />
     <Content Include="bootstrap-3.3.0\_config.yml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="nanoGALLERY-master\bower.json" />
+    <Content Include="nanoGALLERY-master\changelog.md" />
+    <Content Include="nanoGALLERY-master\css\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\css\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\css\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\css\themes\light\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\css\themes\light\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\css\themes\light\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\dist\css\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\dist\css\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\dist\css\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\font\nano_icon_font3.eot" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\font\nano_icon_font3.ttf" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\font\nano_icon_font3.woff" />
+    <Content Include="nanoGALLERY-master\nanogallery.jquery.json" />
+    <Content Include="nanoGALLERY-master\package.json" />
+    <Content Include="nanoGALLERY-master\README.md" />
+    <Content Include="WorkSpances\YTK\1 %281%29.jpg" />
+    <Content Include="WorkSpances\YTK\1 %281%29.png" />
+    <Content Include="WorkSpances\YTK\1 %282%29.png" />
+    <Content Include="WorkSpances\YTK\1 %283%29.png" />
+    <Content Include="WorkSpances\YTK\1 %284%29.png" />
+    <Content Include="WorkSpances\YTK\1 %285%29.png" />
+    <Content Include="WorkSpances\YTK\1 %286%29.png" />
+    <Content Include="WorkSpances\YTK\1 %287%29.png" />
+    <Content Include="WorkSpances\YTK\1 %288%29.png" />
+    <Content Include="WorkSpances\YTK\1 %289%29.png" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="image\01.jpg" />
     <Content Include="image\02.jpg" />
@@ -559,7 +592,58 @@
     <Content Include="js\index.js" />
     <Content Include="js\jquery-1.10.2.js" />
     <Content Include="js\jquery.min.js" />
+<<<<<<< HEAD
     <Content Include="js\respond.js" />
+=======
+    <Content Include="nanoGALLERY-master\.gitattributes" />
+    <Content Include="nanoGALLERY-master\.gitignore" />
+    <Content Include="nanoGALLERY-master\css\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\css\loading.gif" />
+    <Content Include="nanoGALLERY-master\css\nanogallery.css" />
+    <Content Include="nanoGALLERY-master\css\nanogallery.woff.css" />
+    <Content Include="nanoGALLERY-master\css\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\loading.gif" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\nanogallery_clean.css" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\nanogallery_clean.woff.css" />
+    <Content Include="nanoGALLERY-master\css\themes\clean\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\css\themes\light\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\css\themes\light\loading.gif" />
+    <Content Include="nanoGALLERY-master\css\themes\light\nanogallery_light.css" />
+    <Content Include="nanoGALLERY-master\css\themes\light\nanogallery_light.woff.css" />
+    <Content Include="nanoGALLERY-master\css\themes\light\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\demonstration.html" />
+    <Content Include="nanoGALLERY-master\demonstration\image_01.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_01t.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_01ts.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_02.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_02t.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_02ts.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_03.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_03t.jpg" />
+    <Content Include="nanoGALLERY-master\demonstration\image_03ts.jpg" />
+    <Content Include="nanoGALLERY-master\dist\css\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\dist\css\loading.gif" />
+    <Content Include="nanoGALLERY-master\dist\css\nanogallery.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\nanogallery.woff.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\loading.gif" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\nanogallery_clean.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\nanogallery_clean.woff.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\clean\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\font\nano_icon_font3.svg" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\loading.gif" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\nanogallery_light.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\nanogallery_light.woff.min.css" />
+    <Content Include="nanoGALLERY-master\dist\css\themes\light\nano_logo.png" />
+    <Content Include="nanoGALLERY-master\dist\jquery.nanogallery.min.js" />
+    <Content Include="nanoGALLERY-master\Gruntfile.js" />
+    <Content Include="nanoGALLERY-master\jquery.nanogallery.js" />
+    <Content Include="nanoGALLERY-master\jquery.nanogallerydemo.js" />
+    <Content Include="nanoGALLERY-master\performances.html" />
+    <Content Include="nanoGALLERY-master\third.party\jquery-1.7.1.min.js" />
+>>>>>>> 4c9aee662328ebfe0b896f57eb907b3a4096e7a0
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -619,18 +703,22 @@
     <Content Include="Views\Teacher\ShowChapter.cshtml" />
     <Content Include="Views\Teacher\TeacherQuery.cshtml" />
     <Content Include="Views\Shared\End.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Student\YTK.cshtml" />
     <Content Include="Views\Student\SJLX.cshtml" />
     <Content Include="Views\Student\YXZJ.cshtml" />
     <Content Include="Views\Student\ZyEnd.cshtml" />
+=======
+    <Content Include="Views\Teacher\exam.cshtml" />
+    <Content Include="WorkSpances\SJLX\3148-2016-12-2-565.zip" />
+    <Content Include="WorkSpances\SJLX\3148-2016-12-2-708.zip" />
+>>>>>>> 4c9aee662328ebfe0b896f57eb907b3a4096e7a0
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="js\custom\" />
     <Folder Include="Models\" />
-    <Folder Include="WorkSpances\SJLX\" />
-    <Folder Include="WorkSpances\YTK\" />
     <Folder Include="WorkSpances\YXZJ\" />
   </ItemGroup>
   <ItemGroup>

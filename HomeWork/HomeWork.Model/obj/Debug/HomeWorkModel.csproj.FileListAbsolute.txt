@@ -42,4 +42,16 @@ E:\HomeWork-master\HomeWork\HomeWork.Model\bin\Debug\zh-Hans\EntityFramework.res
 E:\HomeWork-master\HomeWork\HomeWork.Model\obj\Debug\HomeWorkModel.csprojResolveAssemblyReference.cache
 E:\HomeWork-master\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.dll
 E:\HomeWork-master\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.pdb
+<<<<<<< HEAD
 D:\桌面\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWorkModel.csprojResolveAssemblyReference.cache
+=======
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\HomeWork.Model.dll.config
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\HomeWork.Model.dll
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\HomeWork.Model.pdb
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\EntityFramework.dll
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\EntityFramework.xml
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWorkModel.csprojResolveAssemblyReference.cache
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.dll
+E:\mvc\test\HomeWork\HomeWork\HomeWork\HomeWork\HomeWork.Model\obj\Debug\HomeWork.Model.pdb
+>>>>>>> 4c9aee662328ebfe0b896f57eb907b3a4096e7a0
