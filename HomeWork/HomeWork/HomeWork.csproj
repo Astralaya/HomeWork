@@ -552,9 +552,14 @@
     <Content Include="image\01.jpg" />
     <Content Include="image\02.jpg" />
     <Content Include="image\03.jpg" />
-    <Content Include="image\Log.png" />
+    <Content Include="image\Log.PNG" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\fileinput.js" />
+    <Content Include="js\fileinput_locale_zh.js" />
     <Content Include="js\index.js" />
+    <Content Include="js\jquery-1.10.2.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\respond.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -570,6 +575,10 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="css\style\bootstrap.css" />
+    <Content Include="css\style\custom\fileupload.css" />
+    <Content Include="css\style\custom\global.css" />
+    <Content Include="css\style\fileinput.css" />
     <Content Include="uploader-master\AUTHORS.txt" />
     <Content Include="uploader-master\demos\css\demo.css" />
     <Content Include="uploader-master\demos\css\images\dark-bg.png" />
@@ -610,10 +619,15 @@
     <Content Include="Views\Teacher\ShowChapter.cshtml" />
     <Content Include="Views\Teacher\TeacherQuery.cshtml" />
     <Content Include="Views\Shared\End.cshtml" />
+    <Content Include="Views\Student\YTK.cshtml" />
+    <Content Include="Views\Student\SJLX.cshtml" />
+    <Content Include="Views\Student\YXZJ.cshtml" />
+    <Content Include="Views\Student\ZyEnd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="js\custom\" />
     <Folder Include="Models\" />
     <Folder Include="WorkSpances\SJLX\" />
     <Folder Include="WorkSpances\YTK\" />

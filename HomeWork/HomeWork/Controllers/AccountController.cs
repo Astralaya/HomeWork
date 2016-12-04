@@ -32,6 +32,7 @@ namespace HomeWork.Controllers
                         error(user);
                         return View(lu);
                     }
+
                     FormsAuthentication.SetAuthCookie(user.StudentNo.ToString(), false);
                     return RedirectToAction("Index", "Student");
                 }
@@ -70,6 +71,10 @@ namespace HomeWork.Controllers
         {
             ModelState.AddModelError("", "用户名或密码不正确！！");
         }
+        /// <summary>
+        /// 注销
+        /// </summary>
+        /// <returns></returns>
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();

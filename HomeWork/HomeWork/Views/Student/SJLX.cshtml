@@ -1,0 +1,73 @@
+﻿            @using (Html.BeginForm("LianXi", "Student", FormMethod.Post, new { enctype = "multipart/form-data", id = "LianXi", Class = "subject1" }))
+            {
+                <table>
+                    <tr style="height: 50px">
+                        <td>书本选择: </td>
+                        <td>
+                            @Html.DropDownList("SubjectIdlx", (SelectList)ViewBag.list, "请选择", new { id = "subject1", Class = "form-control" })
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>章节选择: </td>
+                        <td>
+                            <div class="chapter">@Html.Action("ShowChapter", "Student")</div>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>选择文件(10M以内): </td>
+                        <td>
+                            <input type="file" name="uploadFilelx" class="form-control" id="file" />
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>完成度: </td>
+                        <td>
+                            <input type="text" name="Speedlx" class="form-control" id="speedlx" />
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>描述(100字以内): </td>
+                        <td>
+                            <textarea name="Describelx" class="form-control" id="describelx"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 80px">
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="提 交" class="btn btn-primary btn-lg" style="width: 200px" />
+                        </td>
+                    </tr>
+                </table>
+            }
+<!----------------上级练习上传 #begin------------------>
+<script>
+    $("#LianXi").submit(function () {
+
+        var obj = $("#file").val();
+
+
+        //必填验证
+        var subjectlx = $("#subject1").val().trim();
+        var chapterIdlx = $("#chapterIdlx").val().trim();
+        var speedlx = $("#speedlx").val().trim();
+        var describelx = $("#describelx").val().trim();
+        if (subjectlx == "" || chapterIdlx == "" || speedlx == "" || describelx == "") {
+            alert("请将信息填写完整！");
+            return false;
+        }
+        if (obj == "") {
+            alert("请选择要上传的文件!");
+            return false;
+        }
+        if (speedlx <= 0 || speedlx > 100) {
+            alert("完成度必须在1~100之间！");
+            return false;
+        }
+        var stuff = obj.match(/^(.*)(\.)(.{1,8})$/)[3];
+        if (stuff != "zip") {
+            alert("文件类型不正确，请选择.zip文件!");
+            return false;
+        }
+        return true;
+    });
+</script>
+<!----------------上机练习上传 #end------------------>

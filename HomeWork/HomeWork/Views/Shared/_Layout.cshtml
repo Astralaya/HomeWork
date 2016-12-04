@@ -1,5 +1,4 @@
-﻿
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -14,39 +13,39 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body style="background-image: url('~/image/bac.jpg ')">
     <div>
         <div style="float: left">
-            <img src="~/image/Log.png" />
+            <img src="~/image/Log.PNG" />
+            </div>
+            <div style="float: right">
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a id="reload" href="@Url.Action("Index")">刷新</a></li>
+                    <li role="presentation"><a href="@Url.Action("LogOut", "Account")">注销</a></li>
+                    <li role="presentation"><a href="#">问题反馈</a></li>
+                </ul>
+            </div>
         </div>
-        <div style="float: right">
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" class="active"><a id="reload" href="@Url.Action("Index")">刷新</a></li>
-                <li role="presentation"><a href="@Url.Action("LogOut","Account")">注销</a></li>
-                <li role="presentation"><a href="#">问题反馈</a></li>
-            </ul>
+        <br />
+        <br />
+        <div class="carousel slide" style="height: 40px">
+            <span style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </div>
-    </div>
-    <br />
-    <br />
-    <div class="carousel slide" style="height: 40px">
-        <span style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    </div>
-    <br />
-    @RenderBody()
+        <br />
+        @RenderBody()
 
-    @Html.Partial("End");
+        @Html.Partial("End");
 
     @Scripts.Render("~/bundles/jquery")
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-    <link href="~/css/font.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+        <link href="~/css/font.css" rel="stylesheet" />
 
-    @RenderSection("scripts", required: false)
-    <script>
-        $.ajaxSetup({ cache: false });
-        function a(data) {
-            $(".a").html(data);
-        }
-    </script>
+        @RenderSection("scripts", required: false)
+        <script>
+            $.ajaxSetup({ cache: false });
+            function a(data) {
+                $(".a").html(data);
+            }
+        </script>
 </body>
 </html>

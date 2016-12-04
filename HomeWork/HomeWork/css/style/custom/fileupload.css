@@ -1,0 +1,30 @@
+﻿.file-preview-frame {
+    position: relative;
+}
+
+.file-preview-frame .remark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    opacity: 0.8;
+    background-color: #eee;
+    text-align: left;
+    color: #000;
+}
+
+.file-preview-frame .remark-mask:before {
+    content: '备注：';
+}
+
+
+.file-preview-frame .remark-mask.empty {
+    display: none;
+}
+
+.file-preview-frame .remark-mask.selected {
+    display: block;
+    background-color: #337ab7;
+}

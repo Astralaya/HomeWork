@@ -1,0 +1,53 @@
+﻿<div style="height: 100px">学员作业登记系统>云题库>上传图片</div>
+
+<div class="container demo-wrapper">
+    <div class="page-header">
+        <h1>云题库 <small>上传图片</small></h1>
+    </div>
+    <link href="~/css/style/fileinput.css" rel="stylesheet" />
+    <link href="~/css/style/custom/fileupload.css" rel="stylesheet" />
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <span class="label label-success" id="title" style="height: 30px; display: block; font-size: 24px;">截图上传</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <input id="fileInput" name="file" type="file" multiple="multiple" data-upload-url="#">
+                </div>
+                <hr />
+            </div>
+            <div class="row"></div>
+        </div>
+        <script src="~/js/fileinput.js"></script>
+        <script src="~/js/fileinput_locale_zh.js"></script>
+        <script src="~/js/respond.js"></script>
+        <script type="text/javascript">
+            $('#fileInput').fileinput({
+                language: 'zh', //设置语言
+                //uploadUrl: "/FileUpload/File", //上传的地址www.ggfenxiang8.com
+
+                // maxFileCount: 100,
+                enctype: 'multipart/form-data',
+                showUpload: true, //是否显示上传按钮
+                showCaption: false,//是否显示标题
+                browseClass: "btn btn-primary", //按钮样式             
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+            });
+        </script>
+    </form>
+    <div class="alert alert-info">
+        Read the Blog Article and Source code for this Example here: 
+        <a href="#">http://blog.daniel.com.uy/2014/01/31/jquery-drag-and-drop-progress-files.html</a>
+    </div>
+
+    <div class="demo-footer">
+        <p>&copy; Daniel Morales 2017</p>
+    </div>
+</div>
+<!----------------云题库上传 #begin------------------>
+
+<!----------------云题库上传 #end------------------>

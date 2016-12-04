@@ -2,4 +2,4 @@
     ViewBag.Title = "ShowChapter";
 }
 @{SelectList list = new SelectList(ViewBag.chapter, "ChapterId", "ChapterName");}
-@Html.DropDownList("ChapterIdlx", list,"请选择", new {id="chapterId",Class="form-control"})
+@Html.DropDownList("ChapterId", list,"请选择", new {id="chapterIdlx",Class="form-control"})

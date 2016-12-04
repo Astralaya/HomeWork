@@ -1,0 +1,58 @@
+﻿body {
+    font-family: 'Microsoft YaHei UI' 'Microsoft YaHei' Arial;
+    font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Microsoft YaHei';
+}
+
+.btn > .glyphicon:first-child {
+    margin-right: 3px;
+}
+
+.field-required:before {
+    content: '*';
+}
+
+.table > tbody > tr > th {
+    border-top: none;
+}
+
+.table-detail >tbody > tr > td {
+    border-top: none;
+}
+
+.table-detail tr td:first-child {
+    text-align: right;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.empty-item {
+    display: none!important;
+    color: #888;
+}
+
+.empty-item:last-child{
+    display:block!important;
+}
+
+tr.empty-item {
+    text-align: center;
+}
+
+tr.empty-item:last-child{
+    display:table-row!important;
+}
+
+/*ul.bootstrap-tree {
+    list-style: none;
+    padding-left: 0;
+    line-height: 24px
+}
+
+.bootstrap-tree ul {
+    list-style: none;
+    padding-left: 24px;
+}*/

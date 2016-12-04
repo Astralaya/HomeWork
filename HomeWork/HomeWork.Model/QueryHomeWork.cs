@@ -16,5 +16,6 @@ namespace HomeWork.Model
        public System.DateTime UploadTime { get; set; }  //上传时间
        public string Describe { get; set; }     //文件描述
        public string UploadFileName { get; set; }   //文件名
+       public string ChapterName { get; set; }//章节
     }
 }

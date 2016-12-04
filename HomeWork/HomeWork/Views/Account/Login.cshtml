@@ -19,9 +19,9 @@
 </head>
 <body>
     <div id="stage">
-        <div id="guide" class="simple float" style="height: 110px">
+        <div id="guide" class="simple float" style="height: 110px;">
             <h1 style="font-weight: bolder">
-                <img src="~/image/Log.png" style="padding: 0px" />
+                <img src="~/image/Log.PNG" style="padding: 0px"/>
             </h1>
         </div>
         <div id="mainer" style="min-height: 298px;">
@@ -86,7 +86,7 @@
                                         <div class="input-group">
                                             <span class="input-group-addon glyphicon glyphicon-registration-mark"></span>
                                             <i class="inp-icon icon icon-lock"></i>
-                                             @Html.TextBoxFor(m => m.IdentityCode, new { placeholder = "请输入验证码" })
+                                            @Html.TextBoxFor(m => m.IdentityCode, new { placeholder = "请输入验证码" })
                                         </div>
                                         <i class="inp-icon icon icon-lock"></i>
                                         <span class="clearfix"></span>
@@ -107,12 +107,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div>
 
-                                    <div>
-                                        <input type="submit" value="登  录" style="height: 40px; background-color: #778CDD" />
-                                    </div>
+
+                                <div>
+                                    <input type="submit" value="登  录" style="height: 40px;" class="btn btn-primary btn-lg btn-block" id="a" />
+                                    <div style="height:60px"></div>
                                 </div>
+
                             </form>
                         </div>
                         <div class="other-login">

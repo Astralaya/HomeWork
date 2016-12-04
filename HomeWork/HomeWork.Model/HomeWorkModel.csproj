@@ -100,6 +100,8 @@
     <Compile Include="UploadFile.cs">
       <DependentUpon>HomeWork.tt</DependentUpon>
     </Compile>
+    <Compile Include="YTK.cs" />
+    <Compile Include="YuXi.cs" />
     <Compile Include="YXZJ.cs">
       <DependentUpon>HomeWork.tt</DependentUpon>
     </Compile>

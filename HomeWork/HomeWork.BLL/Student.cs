@@ -34,5 +34,13 @@ namespace HomeWork.BLL
         {
             return student.AddLianXi(lx);
         }
+        public bool AddYuXi(YuXi yx)
+        {
+            return student.AddYuXi(yx);
+        }
+        public bool AddYTK(YTK ytk)
+        {
+            return student.AddYTK(ytk);
+        }
     }
 }

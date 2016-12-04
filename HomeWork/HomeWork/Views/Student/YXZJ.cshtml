@@ -1,0 +1,55 @@
+﻿            @using (Html.BeginForm("Yuxi", "Student", FormMethod.Post, new { enctype = "multipart/form-data", id = "LianXi" }))
+            {
+                <table>
+                    <tr style="height: 50px">
+                        <td>书本选择: </td>
+                        <td>
+                            @Html.DropDownList("SubjectIdyx", (SelectList)ViewBag.list, "请选择", new { Class = "form-control subject1" })
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>章节选择: </td>
+                        <td>
+                            <div class="chapter">@Html.Action("ShowChapter", "Student")</div>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>选择文件(10M以内): </td>
+                        <td>
+                            <input type="file" name="uploadFileyx" class="form-control" id="uploadFileyx" />
+                        </td>
+                    </tr>
+                    <tr style="height: 100px">
+                        <td>已掌握: </td>
+                        <td>
+                            <textarea name="Z_Have" class="form-control" id="Z_Have"></textarea>
+                        </td>
+                        <td>未掌握: </td>
+                        <td>
+                             <textarea name="Z_NotHave" class="form-control" id="Z_NotHave"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 100px">
+                        <td>已预习: </td>
+                        <td>
+                            <textarea name="Y_Have" class="form-control" id="Y_Have"></textarea>
+                        </td>
+                        <td>未预习: </td>
+                        <td>
+                             <textarea name="Y_NotHave" class="form-control" id="Y_NotHave"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 50px">
+                        <td>描述(100字以内): </td>
+                        <td>
+                            <textarea name="Describeyx" class="form-control" id="Describeyx"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="height: 80px">
+                        <td colspan="2" style="text-align: center;">
+                            <input type="submit" value="提 交" class="btn btn-primary btn-lg" style="width: 200px" />
+                        </td>
+                    </tr>
+
+                </table>
+            }

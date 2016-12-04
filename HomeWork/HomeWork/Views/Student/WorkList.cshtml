@@ -1,36 +1,50 @@
 ﻿@using HomeWork.Model
-<div class="a" style="">
-    <table class="table table-bordered">
+@model List<QueryHomeWork>
+@{
+    ViewBag.Title = "QueryHomeWork";
+}
+<link href="~/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+
+
+
+@if (Model != null)
+{
+    
+    <table class="table">
+
         <thead>
             <tr>
-                <th>学生名称</th>
-                <th>作业标题</th>
-                <th>时间</th>
-                <th>文件地址</th>
-                <th>评价</th>
-                <th>老师留言</th>
+                <th>章节</th>
+                <th>学生姓名</th>
                 <th>完成度</th>
-                <th>作业描述</th>
+                <th>评价</th>
+                <th>评分</th>
+                <th>上传时间</th>
+                <th>文件描述</th>
+
             </tr>
         </thead>
-        @{
-            List<QueryHomeWork> list = ViewBag.yuxi as List<QueryHomeWork>;
 
-            foreach (var item in list)
+        <tbody>
+
+            @foreach (HomeWork.Model.QueryHomeWork m in Model)
             {
-            <tbody class="table-striped">
-                <tr>
-                    <td class="info">@item.StudentName</td>
-                    <td style="width: 20px">@item.UploadFileName</td>
-                    <td>@item.UploadTime</td>
-                    <td>@item.UploadFilePath</td>
-                    <td>@item.ScoreName</td>
-                    <td>@item.Comment</td>
-                    <td>@item.Speed</td>
-                    <td>@item.Describe</td>
+                <tr class="active">
+                    <td>@m.ChapterName</td>
+                    <td>@m.StudentName</td>
+                    <td>@m.Speed</td>
+                    <td>@m.Comment</td>
+                    <td>@m.ScoreName</td>
+                    <td>@m.UploadTime</td>
+                    <td>@m.Describe</td>
                 </tr>
-            </tbody>
             }
-        }
+        </tbody>
     </table>
-</div>
+}
+
+
+
+
+
