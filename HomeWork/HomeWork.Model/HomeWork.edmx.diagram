@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4d5e350b7734403e860920dd46c99521" Name="关系图1">
+      <Diagram DiagramId="067383f949cb43ebabe7c5e46c68aa7d" Name="关系图1">
         <EntityTypeShape EntityType="HomeWorkModel.Administrator" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Chapter" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeWorkModel.Class" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
